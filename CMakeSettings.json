@@ -1,0 +1,62 @@
+﻿{
+  "configurations": [
+    {
+      "name": "Debug",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      "inheritEnvironments": [ "msvc_x64" ],
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "-v",
+      "ctestCommandArgs": "--verbose",
+      "variables": [
+        {
+          "name": "_HASHLIB",
+          "value": "",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "VALGRIND_FOUND",
+          "value": "C:/Users/famari_carlo/Downloads/valgrind-3.15.0/autogen.sh",
+          "type": "FILEPATH"
+        }
+      ]
+    },
+    {
+      "name": "x64-Clang-Debug",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "-v",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [ "clang_cl_x64" ],
+      "variables": []
+    },
+    {
+      "name": "Release",
+      "generator": "Ninja",
+      "configurationType": "Release",
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "-v",
+      "ctestCommandArgs": "--verbose",
+      "inheritEnvironments": [ "msvc_x64" ],
+      "variables": [
+        {
+          "name": "_HASHLIB",
+          "value": "",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "VALGRIND_FOUND",
+          "value": "C:/Users/famari_carlo/Downloads/valgrind-3.15.0/autogen.sh",
+          "type": "FILEPATH"
+        }
+      ]
+    }
+  ]
+}

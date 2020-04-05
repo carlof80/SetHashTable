@@ -1,0 +1,11 @@
+CompileTest 18 0.00401395
+SetTest1 21 0.00163098
+SetTest2 21 0.00160899
+ValgrindTest1 0 0
+ValgrindTest2 0 0
+SetTest3 2 0.0167248
+SetTest4 2 0.0187109
+SetTest5 1 0.0345656
+---
+ValgrindTest1
+ValgrindTest2

@@ -1,0 +1,67 @@
+[
+{
+  "directory": "C:/Users/famari_carlo/source/repos/SetHashTable/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1425~1.286\\bin\\HostX86\\x64\\cl.exe  /nologo /TP  -I..\\..\\..\\include -I..\\..\\..\\lib -I..\\..\\..\\src  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /std:c++latest -g /FoCMakeFiles\\hashset.dir\\src\\Beverage.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\famari_carlo\\source\\repos\\SetHashTable\\src\\Beverage.cpp",
+  "file": "C:/Users/famari_carlo/source/repos/SetHashTable/src/Beverage.cpp"
+},
+
+{
+  "directory": "C:/Users/famari_carlo/source/repos/SetHashTable/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1425~1.286\\bin\\HostX86\\x64\\cl.exe  /nologo /TP  -I..\\..\\..\\include -I..\\..\\..\\lib -I..\\..\\..\\src  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /std:c++latest -g /FoCMakeFiles\\hashset.dir\\src\\ElectronicDevice.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\famari_carlo\\source\\repos\\SetHashTable\\src\\ElectronicDevice.cpp",
+  "file": "C:/Users/famari_carlo/source/repos/SetHashTable/src/ElectronicDevice.cpp"
+},
+
+{
+  "directory": "C:/Users/famari_carlo/source/repos/SetHashTable/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1425~1.286\\bin\\HostX86\\x64\\cl.exe  /nologo /TP  -I..\\..\\..\\include -I..\\..\\..\\lib -I..\\..\\..\\src  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /std:c++latest -g /FoCMakeFiles\\hashset.dir\\src\\Food.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\famari_carlo\\source\\repos\\SetHashTable\\src\\Food.cpp",
+  "file": "C:/Users/famari_carlo/source/repos/SetHashTable/src/Food.cpp"
+},
+
+{
+  "directory": "C:/Users/famari_carlo/source/repos/SetHashTable/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1425~1.286\\bin\\HostX86\\x64\\cl.exe  /nologo /TP  -I..\\..\\..\\include -I..\\..\\..\\lib -I..\\..\\..\\src  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /std:c++latest -g /FoCMakeFiles\\hashset.dir\\src\\HashNode.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\famari_carlo\\source\\repos\\SetHashTable\\src\\HashNode.cpp",
+  "file": "C:/Users/famari_carlo/source/repos/SetHashTable/src/HashNode.cpp"
+},
+
+{
+  "directory": "C:/Users/famari_carlo/source/repos/SetHashTable/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1425~1.286\\bin\\HostX86\\x64\\cl.exe  /nologo /TP  -I..\\..\\..\\include -I..\\..\\..\\lib -I..\\..\\..\\src  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /std:c++latest -g /FoCMakeFiles\\hashset.dir\\src\\HashSet.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\famari_carlo\\source\\repos\\SetHashTable\\src\\HashSet.cpp",
+  "file": "C:/Users/famari_carlo/source/repos/SetHashTable/src/HashSet.cpp"
+},
+
+{
+  "directory": "C:/Users/famari_carlo/source/repos/SetHashTable/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1425~1.286\\bin\\HostX86\\x64\\cl.exe  /nologo /TP  -I..\\..\\..\\include -I..\\..\\..\\lib -I..\\..\\..\\src  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /std:c++latest -g /FoCMakeFiles\\hashset.dir\\src\\HashSetInt.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\famari_carlo\\source\\repos\\SetHashTable\\src\\HashSetInt.cpp",
+  "file": "C:/Users/famari_carlo/source/repos/SetHashTable/src/HashSetInt.cpp"
+},
+
+{
+  "directory": "C:/Users/famari_carlo/source/repos/SetHashTable/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1425~1.286\\bin\\HostX86\\x64\\cl.exe  /nologo /TP  -I..\\..\\..\\include -I..\\..\\..\\lib -I..\\..\\..\\src  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /std:c++latest -g /FoCMakeFiles\\hashset.dir\\src\\HashSetItem.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\famari_carlo\\source\\repos\\SetHashTable\\src\\HashSetItem.cpp",
+  "file": "C:/Users/famari_carlo/source/repos/SetHashTable/src/HashSetItem.cpp"
+},
+
+{
+  "directory": "C:/Users/famari_carlo/source/repos/SetHashTable/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1425~1.286\\bin\\HostX86\\x64\\cl.exe  /nologo /TP  -I..\\..\\..\\include -I..\\..\\..\\lib -I..\\..\\..\\src  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /std:c++latest -g /FoCMakeFiles\\hashset.dir\\src\\Item.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\famari_carlo\\source\\repos\\SetHashTable\\src\\Item.cpp",
+  "file": "C:/Users/famari_carlo/source/repos/SetHashTable/src/Item.cpp"
+},
+
+{
+  "directory": "C:/Users/famari_carlo/source/repos/SetHashTable/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1425~1.286\\bin\\HostX86\\x64\\cl.exe  /nologo /TP  -I..\\..\\..\\include -I..\\..\\..\\lib -I..\\..\\..\\src  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /std:c++latest -g /FoCMakeFiles\\hashset.dir\\src\\PersonalCareProduct.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\famari_carlo\\source\\repos\\SetHashTable\\src\\PersonalCareProduct.cpp",
+  "file": "C:/Users/famari_carlo/source/repos/SetHashTable/src/PersonalCareProduct.cpp"
+},
+
+{
+  "directory": "C:/Users/famari_carlo/source/repos/SetHashTable/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1425~1.286\\bin\\HostX86\\x64\\cl.exe  /nologo /TP  -I..\\..\\..\\include -I..\\..\\..\\lib -I..\\..\\..\\src  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /std:c++latest -g /FoCMakeFiles\\hashset.dir\\src\\Store.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\famari_carlo\\source\\repos\\SetHashTable\\src\\Store.cpp",
+  "file": "C:/Users/famari_carlo/source/repos/SetHashTable/src/Store.cpp"
+},
+
+{
+  "directory": "C:/Users/famari_carlo/source/repos/SetHashTable/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1425~1.286\\bin\\HostX86\\x64\\cl.exe  /nologo /TP  -I..\\..\\..\\include -I..\\..\\..\\lib -I..\\..\\..\\src  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /std:c++latest -g -std:c++17 /FoCMakeFiles\\SetHashTable_test.dir\\test\\Test.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\famari_carlo\\source\\repos\\SetHashTable\\test\\Test.cpp",
+  "file": "C:/Users/famari_carlo/source/repos/SetHashTable/test/Test.cpp"
+}
+]
