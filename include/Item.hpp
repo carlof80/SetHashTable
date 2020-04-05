@@ -45,20 +45,20 @@ namespace set
 class Item
 {
 public:
-    Item();
+    explicit Item() = default;
     virtual ~Item();
     Item(const Item& other);
-    Item(string b, string m, float p, bool d, int s);
+    Item(string b, string m, float p, bool d, size_t s);
     Item(string b, string m);
     string brand;
     string model;
 
     // get-set
-    float getPrice();
+    float getPrice() const;
     bool  setPrice(float p);
-    bool  isOnDiscount();
+    bool   isOnDiscount() const;
     void  setOnDiscount(bool d);
-    int   getStock();
+    size_t getStock() const;
     void  setStock(int s);
 
     virtual string sprint();
@@ -69,7 +69,7 @@ public:
 protected:
     float price;
     bool  onDiscount;
-    int   stock;
+    size_t stock;
 };
 
 } // namespace set

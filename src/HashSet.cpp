@@ -51,19 +51,35 @@ HashSet<K, V>::HashSet(size_t c, HashNode<K, V>* initNode)
     }
 }
 
-template<typename K, typename V> HashSet<K, V>::~HashSet() {}
+template<typename K, typename V>
+HashSet<K, V>::HashSet(const HashSet<K, V>& hashset)
+{
+    capacity   = hashset.capacity;
+    _num_items = hashset._num_items;
+    _items     = new HashNode<K, V>*[capacity];
+    for (size_t i = 0; i < capacity; i++)
+    {
+        _items[i] = new HashNode<K, V>(hashset._items[i]);
+    }
+}
 
-template<typename K, typename V> size_t HashSet<K, V>::size()
+template<typename K, typename V> HashSet<K, V>::~HashSet()
+{
+    delete[] _items;
+}
+
+template<typename K, typename V> size_t HashSet<K, V>::size() const
 {
     return _num_items;
 }
 
-template<typename K, typename V> bool HashSet<K, V>::isEmpty()
+template<typename K, typename V> bool HashSet<K, V>::isEmpty() const
 {
     return (_num_items == 0);
 }
 
-template<typename K, typename V> size_t HashSet<K, V>::hashCode(const K& k)
+template<typename K, typename V>
+size_t HashSet<K, V>::hashCode(const K& k) const
 {
     return k % capacity;
 }
@@ -182,7 +198,8 @@ template<typename K, typename V> V HashSet<K, V>::findItem(const K& k)
     return NULL;
 }
 
-template<typename K, typename V> HashNode<K, V>* HashSet<K, V>::get(size_t pos)
+template<typename K, typename V>
+HashNode<K, V>* HashSet<K, V>::get(size_t pos) const
 {
     return _items[pos];
 }

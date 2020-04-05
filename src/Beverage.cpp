@@ -1,3 +1,4 @@
+#include "..\include\Beverage.hpp"
 /**
  * @copyright Copyright © 2020 SetHashTable. All rights reserved.
  *
@@ -44,7 +45,17 @@ Beverage::Beverage(string b, string m, float p, bool d, int s, BeverageType t) :
     _type = t;
 }
 
+Beverage::Beverage(const Beverage& beverage) : Item(beverage)
+{
+    _type = beverage._type;
+}
+
 Beverage::~Beverage() {}
+
+BeverageType Beverage::getType() const
+{
+    return _type;
+}
 
 string Beverage::sprint()
 {

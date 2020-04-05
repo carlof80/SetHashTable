@@ -1,3 +1,4 @@
+#include "..\include\Food.hpp"
 /**
  * @copyright Copyright © 2020 SetHashTable. All rights reserved.
  *
@@ -41,23 +42,27 @@ using namespace set;
 Food::Food(string b, string m, float p, bool d, int s, FoodType t) :Item(b, m, p, d, s)
 {
 	_type = t;
+    _production_date = "N.A."; //Not Available
+    _expiration_date = "N.A."; // Not Available
+}
+
+Food::Food(const Food& food) : Item(food) 
+{
+    _type = food._type;
+    _production_date = food._production_date;
+    _expiration_date = food._expiration_date;
 }
 
 Food::~Food() {
 
 }
 
-FoodType Food::getType()
+FoodType Food::getType() const
 {
 	return _type;
 }
 
-void Food::setType(FoodType t)
-{
-	_type = t;
-}
-
-string Food::getProductionDate()
+string Food::getProductionDate() const
 {
 	return _production_date;
 }
@@ -67,7 +72,7 @@ void Food::setProductionDate(string date)
 	_production_date = date;
 }
 
-string Food::getExpirationDate()
+string Food::getExpirationDate() const
 {
 	return _expiration_date;
 }
@@ -89,7 +94,9 @@ string Food::sprint()
 		"Bread"
 	};
 	string result = Item::sprint();
-	result += "Type: " + TYPES[(int)_type];
+	result += "Type: " + TYPES[(int)_type] + "\n";
+    result += "Production date: " + _production_date + "\n";
+    result += "Expiration date: " + _expiration_date + "\n";
 	return result;
 }
 

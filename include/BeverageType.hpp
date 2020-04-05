@@ -38,6 +38,10 @@
 
 namespace set
 {
+
+ /**
+ * Enum class containing all types of beverages
+ */
 enum class BeverageType
 {
     WATER = 0,

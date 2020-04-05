@@ -43,19 +43,25 @@ namespace set
 class PersonalCareProduct : public Item
 {
 public:
+    /**
+     * @brief Default constructor
+     */
+    explicit PersonalCareProduct() = default;
+
     PersonalCareProduct(string                  b,
                         string                  m,
                         float                   p,
                         bool                    d,
                         int                     s,
                         PersonalCareProductType t);
+    PersonalCareProduct(const PersonalCareProduct& pcp);
     ~PersonalCareProduct();
-
-    PersonalCareProductType type;
+    PersonalCareProductType getType() const;
     string                  sprint() override;
     void                    copy(Item* item);
 
 private:
+    PersonalCareProductType _type;
 };
 
 } // namespace set

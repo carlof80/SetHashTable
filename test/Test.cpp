@@ -38,8 +38,6 @@
 #include "BeverageType.hpp"
 #include "ElectronicDevice.hpp"
 #include "ElectronicDeviceType.hpp"
-#include "PersonalCareProduct.hpp"
-#include "PersonalCareProductType.hpp"
 #include "Food.hpp"
 #include "FoodType.hpp"
 #include "HashNode.cpp"
@@ -51,6 +49,8 @@
 #include "HashSetItem.cpp"
 #include "HashSetItem.hpp"
 #include "Item.hpp"
+#include "PersonalCareProduct.hpp"
+#include "PersonalCareProductType.hpp"
 #include "Store.cpp"
 #include "Store.hpp"
 #include <iostream> //std::cout
@@ -86,10 +86,15 @@ TEST_CASE("Set Test", "[SetTest]")
     h->insertItemLP(2, 17);
 
     REQUIRE(h->findItem(2) == 42);
-    
+
     REQUIRE(h->removeItem(12) == NULL);
 
+    // Copy test
+    HashSetInt* h2 = new HashSetInt(*h);
+    REQUIRE(h->sprint() == h2->sprint());
+
     delete h;
+    delete h2;
 }
 
 TEST_CASE("Set Store management", "[StoreTest]")
@@ -138,12 +143,19 @@ TEST_CASE("Set Store management", "[StoreTest]")
     INFO("Check items number...")
     REQUIRE(store->getItemsNumber() == 6);
     INFO("Check dynamic cast...")
-    REQUIRE(dynamic_cast<ElectronicDevice*>(store->findItem(10584))->type ==
-            ElectronicDeviceType::PC);
+    REQUIRE(
+        dynamic_cast<ElectronicDevice*>(store->findItem(10584))->getType() ==
+        ElectronicDeviceType::PC);
     INFO("Check stock number...")
     REQUIRE(store->totalStock() == 115);
     std::cout << store->sprintItems() << endl;
+
+    std::cout << "\nCheck store copy\n";
+    Store* store2 = new Store(*store);
+    REQUIRE(store->sprintItems() == store2->sprintItems());
+
     delete store;
+    delete store2;
 }
 
 TEST_CASE("Polymorphism Test", "PolymorphismTest]")
@@ -156,7 +168,7 @@ TEST_CASE("Polymorphism Test", "PolymorphismTest]")
     Item* item1 = new ElectronicDevice(
         "Acer", "Aspire", 589.99f, false, 23, ElectronicDeviceType::PC);
     std::cout << item1->sprint() << endl;
-    REQUIRE(dynamic_cast<ElectronicDevice*>(item1)->type ==
+    REQUIRE(dynamic_cast<ElectronicDevice*>(item1)->getType() ==
             ElectronicDeviceType::PC);
     delete item1;
 }
@@ -181,6 +193,7 @@ TEST_CASE("Iterator Test", "IteratorTest]")
     store->addItem(
         12973, new Food("AIA", "Chicken", 2.65f, false, 27, FoodType::MEAT));
     REQUIRE(store->sprintAll() == store->sprintItems());
+
     delete store;
 }
 

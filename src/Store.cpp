@@ -42,13 +42,6 @@
 
 using namespace set;
 
-Store::Store()
-{
-    _name           = "Store";
-    _annual_revenue = 0;
-    _collection = new HashSetItem(100);
-}
-
 Store::Store(string n, string a, size_t c)
 {
     _name           = n;
@@ -62,7 +55,7 @@ Store::Store(Store& store)
     _name           = store._name;
     _address        = store._address;
     _annual_revenue = store._annual_revenue;
-    size_t capacity = store._collection->size();
+    size_t capacity = store._collection->getCapacity();
     _collection =
         new HashSetItem(capacity);
     for (size_t i = 0; i < capacity; i++)
@@ -72,9 +65,12 @@ Store::Store(Store& store)
     }  
 }
 
-Store::~Store() {}
+Store::~Store()
+{
+    delete _collection;
+}
 
-string Store::getName()
+string Store::getName() const
 {
     return _name;
 }
@@ -84,7 +80,7 @@ void Store::setName(string n)
     _name = n;
 }
 
-string Store::getAddress()
+string Store::getAddress() const
 {
     return _address;
 }
@@ -94,7 +90,7 @@ void Store::setAddress(string a)
     _address = a;
 }
 
-int Store::getAnnualRevenue()
+int Store::getAnnualRevenue() const
 {
     return _annual_revenue;
 }
@@ -169,7 +165,7 @@ string Store::sprintItemsOf()
         "-------------------" + result_pcp + "-------------------";
 }
 
-size_t Store::getItemsNumber()
+size_t Store::getItemsNumber() const
 {
     return _collection->size();
 }

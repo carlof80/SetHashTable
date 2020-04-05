@@ -38,9 +38,9 @@
 
 using namespace set;
 
-HashSetInt::HashSetInt(size_t c) :
-    HashSet(c, AVAIL)
-{}
+HashSetInt::HashSetInt(size_t c) : HashSet(c, AVAIL) {}
+
+HashSetInt::HashSetInt(const HashSetInt& hashSetInt) : HashSet(hashSetInt) {}
 
 HashSetInt::~HashSetInt() {}
 

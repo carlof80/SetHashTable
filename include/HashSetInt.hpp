@@ -47,6 +47,7 @@ class HashSetInt : public HashSet<size_t, size_t>
 {
 public:
     HashSetInt(size_t c);
+    HashSetInt(const HashSetInt& hashSetInt);
     ~HashSetInt();
 
     /* Stampa su stringa la lista nell'ordine specificato */

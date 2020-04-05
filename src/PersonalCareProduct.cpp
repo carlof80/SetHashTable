@@ -1,3 +1,4 @@
+#include "..\include\PersonalCareProduct.hpp"
 /**
  * @copyright Copyright © 2020 SetHashTable. All rights reserved.
  *
@@ -46,17 +47,28 @@ PersonalCareProduct::PersonalCareProduct(string                  b,
                                          PersonalCareProductType t) :
     Item(b, m, p, d, s)
 {
-    type = t;
+    _type = t;
+}
+
+PersonalCareProduct::PersonalCareProduct(const PersonalCareProduct& pcp) :
+    Item(pcp)
+{
+    _type = pcp._type;
 }
 
 PersonalCareProduct::~PersonalCareProduct() {}
+
+PersonalCareProductType PersonalCareProduct::getType() const
+{
+    return _type;
+}
 
 string PersonalCareProduct::sprint()
 {
     const string TYPES[] = { "Shampoo",    "Soap",  "Toothbrush",
                              "Body cream", "Towel", "Comb" };
     string       result  = Item::sprint();
-    result += "Type: " + TYPES[(int) type];
+    result += "Type: " + TYPES[(int) _type];
     return result;
 }
 

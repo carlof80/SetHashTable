@@ -60,17 +60,18 @@ public:
     };
 
     HashSet(size_t c, HashNode<K, V>* initNode);
-    ~HashSet();
+    HashSet(const HashSet<K, V>& hashset); // copy constructor
+    virtual ~HashSet();
 
-    size_t                size();
-    bool                  isEmpty();
-    size_t                hashCode(const K& k);
+    size_t                size() const;
+    bool                  isEmpty() const;
+    size_t                hashCode(const K& k) const;
     size_t                insertItemLP(const K& k, const V& v);
     size_t                insertItemQP(const K& k, const V& v);
     V                     removeItem(const K& k);
     V                     findItem(const K& k);
     virtual string        sprint() = 0;
-    HashNode<K, V>*       get(size_t pos);
+    HashNode<K, V>*       get(size_t pos) const;
     K*                    keys();
     V*                    values();
     virtual bool          isAvailable(size_t i);

@@ -38,8 +38,9 @@
 
 using namespace set;
 
-HashSetItem::HashSetItem(size_t c) :
-    HashSet(c, AVAIL)
+HashSetItem::HashSetItem(size_t c) : HashSet(c, AVAIL) {}
+
+HashSetItem::HashSetItem(const HashSetItem& hashSetItem) : HashSet(hashSetItem)
 {}
 
 HashSetItem::~HashSetItem() {}
@@ -51,8 +52,13 @@ bool HashSetItem::isAvailable(size_t i)
 
 void HashSetItem::setAvailable(size_t i)
 {
-    get(i)->key      = AVAIL->key;
-    get(i)->value    = AVAIL->value;
+    get(i)->key   = AVAIL->key;
+    get(i)->value = AVAIL->value;
+}
+
+size_t HashSetItem::getCapacity() const
+{
+    return capacity;
 }
 
 string HashSetItem::sprint()
@@ -62,8 +68,8 @@ string HashSetItem::sprint()
     {
         if (!isAvailable(i))
         {
-            result +=
-                "KEY: " + to_string(get(i)->key) + "\n" + get(i)->value->sprint() + "\n\n";
+            result += "KEY: " + to_string(get(i)->key) + "\n" +
+                get(i)->value->sprint() + "\n\n";
         }
     }
     result += "\n";

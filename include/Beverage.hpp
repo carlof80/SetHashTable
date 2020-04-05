@@ -47,6 +47,12 @@ namespace set
 class Beverage : public Item
 {
 public:
+
+    /**
+     * @brief Default constructor
+     */
+    explicit Beverage() = default;
+
     /**
      * @brief Constructor
      * @details Constructor with all fields
@@ -55,32 +61,48 @@ public:
      * @param[in] p Item price
      * @param[in] d Item onDiscount flag
      * @param[in] s Item stock amount
+     * @param[in] t Item type
      * @see Item.hpp
      */
     Beverage(string b, string m, float p, bool d, int s, BeverageType t);
 
-     /**
+    /**
+     * @brief Constructor
+     * @details Copy constructor
+     * @param[in] beverage reference to Beverage to be copied
+     * @see Item.hpp
+     */
+    Beverage(const Beverage& beverage);
+
+    /**
      * @brief Destructor
      */
     ~Beverage();
 
     /**
-    * @brief Print on string Beverage information
-    * @details Information printed are the same of Item ones, plus type
-    * @return Result string
-    * @remarks Override Item function
-    * @see Item.hpp
-    */
-    string       sprint() override;
+     * @brief Get type of this
+     * @details Getter method for field _type
+     * @return _type
+     */
+    BeverageType getType() const;
+
+    /**
+     * @brief Print on string Beverage information
+     * @details Information printed are the same of Item ones, plus type
+     * @return Result string
+     * @remarks Override Item function
+     * @see Item.hpp
+     */
+    string sprint() override;
 
     /**
      * @brief Copy Item
-     * @details Item information are copied to this
+     * @details Item information are copied to this without creating it
      * @param[in] item  pointer to Item to be copied
      * @return void
      * @see Item.hpp
      */
-    void         copy(Item* item);
+    void copy(Item* item);
 
 private:
     BeverageType _type; /*!< Beverage type among BeverageType elements */

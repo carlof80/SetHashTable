@@ -48,6 +48,7 @@ class HashSetItem : public HashSet<size_t, Item*>
 {
 public:
     HashSetItem(size_t c);
+    HashSetItem(const HashSetItem& hashSetItem);
     ~HashSetItem();
 
     /* Stampa su stringa la lista nell'ordine specificato */
@@ -55,6 +56,7 @@ public:
     string sprint() override;
     bool   isAvailable(size_t i);
     void   setAvailable(size_t i);
+    size_t getCapacity() const;
 
 private:
     static HashNode<size_t, Item*>* AVAIL;

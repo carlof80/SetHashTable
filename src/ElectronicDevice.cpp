@@ -1,3 +1,4 @@
+#include "..\include\ElectronicDevice.hpp"
 /**
  * @copyright Copyright © 2020 SetHashTable. All rights reserved.
  *
@@ -38,39 +39,44 @@
 
 using namespace set;
 
-ElectronicDevice::ElectronicDevice(string b, string m, float p, bool d, int s, ElectronicDeviceType t):Item(b, m, p, d, s)
+ElectronicDevice::ElectronicDevice(string               b,
+                                   string               m,
+                                   float                p,
+                                   bool                 d,
+                                   int                  s,
+                                   ElectronicDeviceType t) :
+    Item(b, m, p, d, s)
 {
-	type = t;
+    _type = t;
 }
 
-ElectronicDevice::~ElectronicDevice() {
+ElectronicDevice::ElectronicDevice(const ElectronicDevice& ed) : Item(ed)
+{
+    _type = ed._type;
+}
 
+ElectronicDevice::~ElectronicDevice() {}
+
+ElectronicDeviceType ElectronicDevice::getType() const
+{
+    return _type;
 }
 
 string ElectronicDevice::sprint()
 {
-	const string TYPES[] = 
-	{
-		"Smartphone",
-		"Tablet",
-		"PC",
-		"Washing machine",
-		"Dryer",
-		"Cooking appliance",
-		"Fridge",
-		"Air conditioner",
-		"Cleaning appliance"
-	};
-	string result = Item::sprint();
-	result += "Type: " + TYPES[(int)type];
-	return result;
+    const string TYPES[] = {
+        "Smartphone",      "Tablet",          "PC",
+        "Washing machine", "Dryer",           "Cooking appliance",
+        "Fridge",          "Air conditioner", "Cleaning appliance"
+    };
+    string result = Item::sprint();
+    result += "Type: " + TYPES[(int) _type];
+    return result;
 }
 
 void ElectronicDevice::copy(Item* item)
 {
-	Item::copy(item);
-	//ElectronicDevice* i = dynamic_cast<ElectronicDevice*>(item);
-	//type = i->type;
+    Item::copy(item);
+    // ElectronicDevice* i = dynamic_cast<ElectronicDevice*>(item);
+    // type = i->type;
 }
-
-

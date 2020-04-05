@@ -36,21 +36,23 @@
 
 #pragma once
 
-namespace set 
+namespace set
 {
-    enum class ElectronicDeviceType 
-    {
-        SMARTPHONE = 0,
-        TABLET,
-        TV,
-        PC,
-        WASHING_MACHINE,
-        DRYER,
-        COOKING_APPLIANCE,
-        FRIDGE,
-        AIR_CONDITIONER,
-        CLEANING_APPLIANCE
-    };
-
+/**
+ * Enum class containing all types of electronic devices
+ */
+enum class ElectronicDeviceType
+{
+    SMARTPHONE = 0,
+    TABLET,
+    TV,
+    PC,
+    WASHING_MACHINE,
+    DRYER,
+    COOKING_APPLIANCE,
+    FRIDGE,
+    AIR_CONDITIONER,
+    CLEANING_APPLIANCE
 };
 
+}; // namespace set

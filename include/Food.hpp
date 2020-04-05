@@ -36,30 +36,108 @@
 
 #pragma once
 
-#include "Item.hpp"
 #include "FoodType.hpp"
+#include "Item.hpp"
 
-namespace set 
+namespace set
 {
-    class Food : public Item 
-    {
-    public:
-        Food(string b, string m, float p, bool d, int s, FoodType t);
-        ~Food();
+class Food : public Item
+{
+public:
+    /**
+     * @brief Default constructor
+     */
+    explicit Food() = default;
 
-        FoodType getType();
-        void     setType(FoodType t);
-        string   getProductionDate();
-        void     setProductionDate(string date);
-        string   getExpirationDate();
-        void     setExpirationDate(string date);
-        string   sprint() override;
-        // bool isExpired();
-        void copy(Item* item);
+    /**
+     * @brief Constructor
+     * @details Constructor with all fields
+     * @param[in] b Item brand
+     * @param[in] m Item model
+     * @param[in] p Item price
+     * @param[in] d Item onDiscount flag
+     * @param[in] s Item stock amount
+     * @param[in] t Item type
+     * @see Item.hpp
+     */
+    Food(string b, string m, float p, bool d, int s, FoodType t);
 
-    private:
-        FoodType _type;
-        string   _production_date;
-        string   _expiration_date;
-    };
+    /**
+     * @brief Constructor
+     * @details Copy constructor
+     * @param[in] food reference to Food to be copied
+     * @see Item.hpp
+     */
+    Food(const Food& food);
+
+    /**
+     * @brief Destructor
+     */
+    ~Food();
+
+    /**
+     * @brief Get type of this
+     * @details Getter method for field _type
+     * @return _type
+     */
+    FoodType getType() const;
+
+    /**
+     * @brief Get production date of this
+     * @details Getter method for field _production_date
+     * @return _production_date
+     */
+    string getProductionDate() const;
+
+    /**
+     * @brief Set production date of this
+     * @details Setter method for field _production_date
+     * @param[in] date string of production date
+     */
+    void setProductionDate(string date);
+
+    /**
+     * @brief Get expiration date of this
+     * @details Getter method for field _expiration_date
+     * @return _expiration_date
+     */
+    string getExpirationDate() const;
+
+    /**
+     * @brief Set expiration date of this
+     * @details Setter method for field _expiration_date
+     * @param[in] date string of expiration date
+     */
+    void setExpirationDate(string date);
+
+    /**
+     * @brief Print on string Food information
+     * @details Information printed are the same of Item ones, plus type
+     * @return Result string
+     * @remarks Override Item function
+     * @see Item.hpp
+     */
+    string sprint() override;
+
+    /**
+     * @brief Item expiration
+     * @details Check if item is expired
+     * @return true if is expired, false otherwise
+     */
+    // bool isExpired();
+
+    /**
+     * @brief Copy Item
+     * @details Item information are copied to this without creating it
+     * @param[in] item  pointer to Item to be copied
+     * @return void
+     * @see Item.hpp
+     */
+    void copy(Item* item);
+
+private:
+    FoodType _type;
+    string   _production_date;
+    string   _expiration_date;
+};
 } // namespace set

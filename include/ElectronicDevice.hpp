@@ -40,23 +40,77 @@
 
 namespace set
 {
+/**
+ *  Class representing ElectronicDevice, derived from Item
+ */
 class ElectronicDevice : public Item
 {
 public:
+
+    /**
+     * @brief Default constructor
+     */
+    explicit ElectronicDevice() = default;
+
+    /**
+     * @brief Constructor
+     * @details Constructor with all fields
+     * @param[in] b Item brand
+     * @param[in] m Item model
+     * @param[in] p Item price
+     * @param[in] d Item onDiscount flag
+     * @param[in] s Item stock amount
+     * @param[in] t Item type
+     * @see Item.hpp
+     */
     ElectronicDevice(string               b,
                      string               m,
                      float                p,
                      bool                 d,
                      int                  s,
                      ElectronicDeviceType t);
+
+    /**
+     * @brief Constructor
+     * @details Copy constructor
+     * @param[in] electronic device reference to ElectronicDevice to be copied
+     * @see Item.hpp
+     */
+    ElectronicDevice(const ElectronicDevice& ed);
+
+    /**
+     * @brief Destructor
+     */
     ~ElectronicDevice();
 
-    ElectronicDeviceType type;
-    string               sprint() override;
-    void                 copy(Item* item);
+    /**
+     * @brief Get type of this
+     * @details Getter method for field _type
+     * @return _type
+     */
+    ElectronicDeviceType getType() const;
+
+    /**
+     * @brief Print on string ElectronicDevice information
+     * @details Information printed are the same of Item ones, plus type
+     * @return Result string
+     * @remarks Override Item function
+     * @see Item.hpp
+     */
+    string sprint() override;
+
+    /**
+     * @brief Copy Item
+     * @details Item information are copied to this without creating it
+     * @param[in] item  pointer to Item to be copied
+     * @return void
+     * @see Item.hpp
+     */
+    void copy(Item* item);
 
 private:
+    ElectronicDeviceType
+        _type; /*!< ElectronicDevice type among ElectronicDeviceType elements */
 };
 
 } // namespace set
-

@@ -39,39 +39,30 @@
 
 using namespace set;
 
-Item::Item()
-{
-    brand      = "";
-    model      = "";
-    price      = 0.00f;
-    onDiscount = false;
-    stock      = 0;
-}
+Item::Item(const Item& other) :
+    // initialization-list
+    brand(other.brand),
+    model(other.model),
+    price(other.price),
+    onDiscount(other.onDiscount),
+    stock(0)
+{}
 
-Item::~Item() {}
-
-Item::Item(const Item& other)
-{
-    brand      = other.brand;
-    model      = other.model;
-    price      = other.price;
-    onDiscount = other.onDiscount;
-    stock      = 0;
-}
-
-Item::Item(string b, string m, float p, bool d, int s)
-{
-    brand      = b;
-    model      = m;
-    price      = p;
-    onDiscount = d;
-    stock      = s;
-}
+Item::Item(string b, string m, float p, bool d, size_t s) :
+    // initialization-list
+    brand(b),
+    model(m),
+    price(p),
+    onDiscount(d),
+    stock(s)
+{}
 
 Item::Item(string b, string m) :
     Item(b, m, 0, false, 0){}; // delegate constructor
 
-float Item::getPrice()
+Item::~Item() {}
+
+float Item::getPrice() const
 {
     return price;
 }
@@ -86,7 +77,7 @@ bool Item::setPrice(float p)
     return true;
 }
 
-bool Item::isOnDiscount()
+bool Item::isOnDiscount() const
 {
     return onDiscount;
 }
@@ -96,7 +87,7 @@ void Item::setOnDiscount(bool d)
     onDiscount = d;
 }
 
-int Item::getStock()
+size_t Item::getStock() const
 {
     return stock;
 }

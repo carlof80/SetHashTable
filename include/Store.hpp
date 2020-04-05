@@ -47,21 +47,21 @@ namespace set
 class Store
 {
 public:
-    Store();
+    explicit Store() = default;
     Store(string n, string a, size_t c);
-    explicit Store(Store& store);
+    Store(Store& store);
     ~Store();
 
-    string getName();
+    string getName() const;
     void   setName(string n);
-    string getAddress();
+    string getAddress() const;
     void   setAddress(string a);
-    int    getAnnualRevenue();
+    int    getAnnualRevenue() const;
     void   setAnnualRevenue(int r);
     string sprintItems();
     string sprintAll(); 
     string sprintItemsOf();
-    size_t getItemsNumber();
+    size_t getItemsNumber() const;
     string sprintCategoryStock();
     void   addItem(size_t k, Item* item);
     Item*  removeItem(size_t k);
