@@ -39,7 +39,8 @@
 
 using namespace set;
 
-Item::Item() {
+Item::Item()
+{
     brand      = "";
     model      = "";
     price      = 0.00f;
@@ -67,7 +68,8 @@ Item::Item(string b, string m, float p, bool d, int s)
     stock      = s;
 }
 
-Item::Item(string b, string m) : Item(b, m, 0, false, 0){};
+Item::Item(string b, string m) :
+    Item(b, m, 0, false, 0){}; // delegate constructor
 
 float Item::getPrice()
 {
