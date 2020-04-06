@@ -238,3 +238,18 @@ TEST_CASE("Probing Set Test", "[ProbingSetTest]")
     REQUIRE(attemptsLP < attemptsQP);
     delete h2;
 }
+
+TEST_CASE("Time Test", "TimeTest]")
+{
+    std::cout
+        << "---------------------------------------------------------------\n";
+    std::cout << "\Time Test\n";
+    std::cout
+        << "---------------------------------------------------------------\n";
+    Item* item1 = new Food("AIA", "Chicken", 2.65f, false, 27, FoodType::MEAT);
+    static_cast<Food*>(item1)->setProductionDate("01 Dec 2019");
+    static_cast<Food*>(item1)->setExpirationDate("13 Apr 2020");
+    std::cout << item1->sprint() << "\n\n";
+    REQUIRE(static_cast<Food*>(item1)->isExpired() == false);
+    delete item1;
+}

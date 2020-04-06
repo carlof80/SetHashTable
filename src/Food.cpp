@@ -36,72 +36,110 @@
  */
 
 #include "Food.hpp"
+#include <ctime>
 
 using namespace set;
 
-Food::Food(string b, string m, float p, bool d, int s, FoodType t) :Item(b, m, p, d, s)
+Food::Food(string b, string m, float p, bool d, int s, FoodType t) :
+    Item(b, m, p, d, s)
 {
-	_type = t;
-    _production_date = "N.A."; //Not Available
+    _type            = t;
+    _production_date = "N.A."; // Not Available
     _expiration_date = "N.A."; // Not Available
 }
 
-Food::Food(const Food& food) : Item(food) 
+Food::Food(const Food& food) : Item(food)
 {
-    _type = food._type;
+    _type            = food._type;
     _production_date = food._production_date;
     _expiration_date = food._expiration_date;
 }
 
-Food::~Food() {
-
-}
+Food::~Food() {}
 
 FoodType Food::getType() const
 {
-	return _type;
+    return _type;
 }
 
 string Food::getProductionDate() const
 {
-	return _production_date;
+    return _production_date;
 }
 
 void Food::setProductionDate(string date)
 {
-	_production_date = date;
+    _production_date = date;
 }
 
 string Food::getExpirationDate() const
 {
-	return _expiration_date;
+    return _expiration_date;
 }
 
 void Food::setExpirationDate(string date)
 {
-	_expiration_date = date;
+    _expiration_date = date;
+}
+
+bool Food::isExpired()
+{
+    std::time_t t           = std::time(0); // get time now
+    std::tm*    now         = std::localtime(&t);
+    size_t      day         = now->tm_mday;
+    size_t      month       = now->tm_mon;
+    size_t      year        = now->tm_year + 1900;
+    size_t      exp_day     = std::stoi(_expiration_date.substr(0, 2));
+    string      s_exp_month = _expiration_date.substr(3, 3);
+    size_t      exp_month   = 0;
+    for (exp_month = 0; exp_month < 12; exp_month++)
+    {
+        if (s_exp_month == MONTHS[exp_month])
+        {
+            break;
+        }
+    }
+    size_t exp_year = std::stoi(_expiration_date.substr(7, 4));
+    size_t diff_y   = year - exp_year;
+    if (diff_y == 0)
+    {
+        size_t diff_m = month - exp_month;
+        if (diff_m == 0)
+        {
+            size_t diff_d = day - exp_day;
+            if (diff_d >= 0)
+            {
+                return false;
+            }
+            return true;
+        }
+        else if (diff_m > 0)
+        {
+            return false;
+        }
+        return true;
+    }
+    else if (diff_y > 0)
+    {
+        return false;
+    }
+
+    return true;
 }
 
 string Food::sprint()
 {
-	const string TYPES[] =
-	{
-		"Meat",
-		"Fish",
-		"Vegetables",
-		"Fruit",
-		"Sweets",
-		"Bread"
-	};
-	string result = Item::sprint();
-	result += "Type: " + TYPES[(int)_type] + "\n";
+    const string TYPES[] = { "Meat",  "Fish",   "Vegetables",
+                             "Fruit", "Sweets", "Bread" };
+    string       result  = Item::sprint();
+    result += "Type: " + TYPES[(int) _type] + "\n";
     result += "Production date: " + _production_date + "\n";
     result += "Expiration date: " + _expiration_date + "\n";
-	return result;
+    return result;
 }
 
 void Food::copy(Item* item)
 {
-	Item::copy(item);
-	_type = dynamic_cast<Food*>(item)->_type;
+    Item::copy(item);
+    _type = dynamic_cast<Food*>(item)->_type;
 }

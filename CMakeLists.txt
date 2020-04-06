@@ -149,6 +149,9 @@ ADD_TEST(NAME SetTest4
 ADD_TEST(NAME SetTest5
          COMMAND ./SetHashTable_test [ProbingSetTest])
 
+ADD_TEST(NAME SetTest6
+         COMMAND ./SetHashTable_test [TimeTest])
+
 find_program(VALGRIND_FOUND valgrind)
 if (VALGRIND_FOUND)
     ADD_TEST(NAME ValgrindTest1

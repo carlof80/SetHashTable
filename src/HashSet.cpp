@@ -130,7 +130,7 @@ size_t HashSet<K, V>::insertItemQP(const K& k, const V& v)
         j++;
         if (++counter > capacity) // to avoid infinite loop
         {
-            return -1;
+            return capacity;
         }
     }
     _num_items++;

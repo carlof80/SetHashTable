@@ -38,21 +38,55 @@
 
 namespace set
 {
-	template<typename K, typename V>
-	class HashNode
-	{
-	public:
-		explicit HashNode() = default;
-        HashNode(const K& k, const V& v);
-		HashNode(HashNode<K, V>* h);
-		~HashNode();
+/**
+ *  Class representing generic HashNode
+ *  Node of a hash table, with key and value
+ */
+template<typename K, typename V> class HashNode
+{
+public:
+    /**
+     * @brief Default constructor
+     */
+    explicit HashNode() = default;
 
-		bool isEqual(HashNode<K, V>* node);
-		void copy(HashNode<K, V>* node);
+    /**
+     * @brief Constructor
+     * @details Constructor with all fields
+     * @param[in] k constant reference to key
+     * @param[in] v constant reference to value
+     */
+    HashNode(const K& k, const V& v);
 
-		K key;
-		V value;
+    /**
+     * @brief Constructor
+     * @details Copy constructor
+     * @param[in] h pointer to HashNode to be copied
+     */
+    HashNode(HashNode<K, V>* h);
 
-	};
+    /**
+     * @brief Destructor
+     */
+    ~HashNode();
 
-}
+    /**
+     * @brief Equality check
+     * @details Check if this is equal to a specified node
+     * @param[in] node pointer to HashNode to be checked
+     * @return true if equal, false otherwise
+     */
+    bool isEqual(HashNode<K, V>* node);
+
+    /**
+     * @brief Copy fields
+     * @details Copy fields of specified node to this without create it
+     * @param[in] node pointer to HashNode to be copied
+     */
+    void copy(HashNode<K, V>* node);
+
+    K key;   /*!< Generic key */
+    V value; /*!< Generic value */
+};
+
+} // namespace set

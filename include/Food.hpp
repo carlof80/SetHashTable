@@ -38,6 +38,7 @@
 
 #include "FoodType.hpp"
 #include "Item.hpp"
+#include <ctime>
 
 namespace set
 {
@@ -92,7 +93,7 @@ public:
     /**
      * @brief Set production date of this
      * @details Setter method for field _production_date
-     * @param[in] date string of production date
+     * @param[in] date struct of production date
      */
     void setProductionDate(string date);
 
@@ -106,7 +107,7 @@ public:
     /**
      * @brief Set expiration date of this
      * @details Setter method for field _expiration_date
-     * @param[in] date string of expiration date
+     * @param[in] date struct of expiration date
      */
     void setExpirationDate(string date);
 
@@ -124,7 +125,7 @@ public:
      * @details Check if item is expired
      * @return true if is expired, false otherwise
      */
-    // bool isExpired();
+    bool isExpired();
 
     /**
      * @brief Copy Item
@@ -136,8 +137,10 @@ public:
     void copy(Item* item);
 
 private:
-    FoodType _type;
-    string   _production_date;
-    string   _expiration_date;
+    FoodType     _type;
+    string       _production_date;
+    string       _expiration_date;
+    const string MONTHS[12] = { "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                                "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
 };
 } // namespace set
