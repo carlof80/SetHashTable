@@ -80,6 +80,8 @@ $(function() {
 <div class="title">set::HashSet&lt; K, V &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="HashSet_8hpp_source.html">HashSet.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
@@ -88,58 +90,622 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7fb4e7c1dcd36ceadfcf49cb068e3fd1"><td class="memItemLeft" align="right" valign="top"><a id="a7fb4e7c1dcd36ceadfcf49cb068e3fd1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>HashSet</b> (size_t c, <a class="el" href="classset_1_1HashNode.html">HashNode</a>&lt; K, V &gt; *initNode)</td></tr>
+<tr class="memitem:a63536482c2ad96516e35533bbe3ee6ec"><td class="memItemLeft" align="right" valign="top"><a id="a63536482c2ad96516e35533bbe3ee6ec"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classset_1_1HashSet.html#a63536482c2ad96516e35533bbe3ee6ec">HashSet</a> ()=default</td></tr>
+<tr class="memdesc:a63536482c2ad96516e35533bbe3ee6ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. <br /></td></tr>
+<tr class="separator:a63536482c2ad96516e35533bbe3ee6ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fb4e7c1dcd36ceadfcf49cb068e3fd1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classset_1_1HashSet.html#a7fb4e7c1dcd36ceadfcf49cb068e3fd1">HashSet</a> (size_t c, <a class="el" href="classset_1_1HashNode.html">HashNode</a>&lt; K, V &gt; *initNode)</td></tr>
+<tr class="memdesc:a7fb4e7c1dcd36ceadfcf49cb068e3fd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a7fb4e7c1dcd36ceadfcf49cb068e3fd1">More...</a><br /></td></tr>
 <tr class="separator:a7fb4e7c1dcd36ceadfcf49cb068e3fd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9e547d727d1844137b51ad779338879"><td class="memItemLeft" align="right" valign="top"><a id="ae9e547d727d1844137b51ad779338879"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> ()</td></tr>
-<tr class="separator:ae9e547d727d1844137b51ad779338879"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8bbe4b14b83e9be5928f2a4724d268c"><td class="memItemLeft" align="right" valign="top"><a id="ab8bbe4b14b83e9be5928f2a4724d268c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isEmpty</b> ()</td></tr>
-<tr class="separator:ab8bbe4b14b83e9be5928f2a4724d268c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b685b578e10f5c8698038a7eedc8118"><td class="memItemLeft" align="right" valign="top"><a id="a5b685b578e10f5c8698038a7eedc8118"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>hashCode</b> (const K &amp;k)</td></tr>
-<tr class="separator:a5b685b578e10f5c8698038a7eedc8118"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02615b389167cd2c3c21ea556214718b"><td class="memItemLeft" align="right" valign="top"><a id="a02615b389167cd2c3c21ea556214718b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>insertItemLP</b> (const K &amp;k, const V &amp;v)</td></tr>
-<tr class="separator:a02615b389167cd2c3c21ea556214718b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab977c9e509ac5d6707eacd3539a4486d"><td class="memItemLeft" align="right" valign="top"><a id="ab977c9e509ac5d6707eacd3539a4486d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>insertItemQP</b> (const K &amp;k, const V &amp;v)</td></tr>
-<tr class="separator:ab977c9e509ac5d6707eacd3539a4486d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a153652e57edac639cbfb6bb7b1112152"><td class="memItemLeft" align="right" valign="top"><a id="a153652e57edac639cbfb6bb7b1112152"></a>
-V&#160;</td><td class="memItemRight" valign="bottom"><b>removeItem</b> (const K &amp;k)</td></tr>
+<tr class="memitem:aa5dddb18a32142b20d7643ee704bc0d2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classset_1_1HashSet.html#aa5dddb18a32142b20d7643ee704bc0d2">HashSet</a> (const <a class="el" href="classset_1_1HashSet.html">HashSet</a>&lt; K, V &gt; &amp;hashset)</td></tr>
+<tr class="memdesc:aa5dddb18a32142b20d7643ee704bc0d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#aa5dddb18a32142b20d7643ee704bc0d2">More...</a><br /></td></tr>
+<tr class="separator:aa5dddb18a32142b20d7643ee704bc0d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b4d1c5b3555616b8e89651384b512e0"><td class="memItemLeft" align="right" valign="top"><a id="a8b4d1c5b3555616b8e89651384b512e0"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classset_1_1HashSet.html#a8b4d1c5b3555616b8e89651384b512e0">~HashSet</a> ()</td></tr>
+<tr class="memdesc:a8b4d1c5b3555616b8e89651384b512e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="separator:a8b4d1c5b3555616b8e89651384b512e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dde7aabc4a19551031433df1f007d7e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classset_1_1HashSet.html#a9dde7aabc4a19551031433df1f007d7e">size</a> () const</td></tr>
+<tr class="memdesc:a9dde7aabc4a19551031433df1f007d7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get set size.  <a href="#a9dde7aabc4a19551031433df1f007d7e">More...</a><br /></td></tr>
+<tr class="separator:a9dde7aabc4a19551031433df1f007d7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae08ed979e6663bce1dec8dfec80ccce7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classset_1_1HashSet.html#ae08ed979e6663bce1dec8dfec80ccce7">isEmpty</a> () const</td></tr>
+<tr class="memdesc:ae08ed979e6663bce1dec8dfec80ccce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check set emptiness.  <a href="#ae08ed979e6663bce1dec8dfec80ccce7">More...</a><br /></td></tr>
+<tr class="separator:ae08ed979e6663bce1dec8dfec80ccce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1e20cbb91b3971ff018d2433d26b7ca"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classset_1_1HashSet.html#ad1e20cbb91b3971ff018d2433d26b7ca">hashCode</a> (const K &amp;k) const</td></tr>
+<tr class="memdesc:ad1e20cbb91b3971ff018d2433d26b7ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hash function.  <a href="#ad1e20cbb91b3971ff018d2433d26b7ca">More...</a><br /></td></tr>
+<tr class="separator:ad1e20cbb91b3971ff018d2433d26b7ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56cc237b15b1bb447a9e38eec874f99f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classset_1_1HashSet.html#a56cc237b15b1bb447a9e38eec874f99f">insertItemLP</a> (const K &amp;k, const V &amp;v)</td></tr>
+<tr class="memdesc:a56cc237b15b1bb447a9e38eec874f99f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linear Probing insertion.  <a href="#a56cc237b15b1bb447a9e38eec874f99f">More...</a><br /></td></tr>
+<tr class="separator:a56cc237b15b1bb447a9e38eec874f99f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3b71c8431beb863dd83b120a7459304"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classset_1_1HashSet.html#ad3b71c8431beb863dd83b120a7459304">insertItemQP</a> (const K &amp;k, const V &amp;v)</td></tr>
+<tr class="memdesc:ad3b71c8431beb863dd83b120a7459304"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quadratic Probing insertion.  <a href="#ad3b71c8431beb863dd83b120a7459304">More...</a><br /></td></tr>
+<tr class="separator:ad3b71c8431beb863dd83b120a7459304"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a153652e57edac639cbfb6bb7b1112152"><td class="memItemLeft" align="right" valign="top">V&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classset_1_1HashSet.html#a153652e57edac639cbfb6bb7b1112152">removeItem</a> (const K &amp;k)</td></tr>
+<tr class="memdesc:a153652e57edac639cbfb6bb7b1112152"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classset_1_1Item.html">Item</a> removal.  <a href="#a153652e57edac639cbfb6bb7b1112152">More...</a><br /></td></tr>
 <tr class="separator:a153652e57edac639cbfb6bb7b1112152"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07d95281ac5420e3d625924faf81341d"><td class="memItemLeft" align="right" valign="top"><a id="a07d95281ac5420e3d625924faf81341d"></a>
-V&#160;</td><td class="memItemRight" valign="bottom"><b>findItem</b> (const K &amp;k)</td></tr>
+<tr class="memitem:a07d95281ac5420e3d625924faf81341d"><td class="memItemLeft" align="right" valign="top">V&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classset_1_1HashSet.html#a07d95281ac5420e3d625924faf81341d">findItem</a> (const K &amp;k)</td></tr>
+<tr class="memdesc:a07d95281ac5420e3d625924faf81341d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classset_1_1Item.html">Item</a> searching.  <a href="#a07d95281ac5420e3d625924faf81341d">More...</a><br /></td></tr>
 <tr class="separator:a07d95281ac5420e3d625924faf81341d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91031d893725b0863f46754d64c1b23d"><td class="memItemLeft" align="right" valign="top"><a id="a91031d893725b0863f46754d64c1b23d"></a>
-virtual string&#160;</td><td class="memItemRight" valign="bottom"><b>sprint</b> ()=0</td></tr>
+<tr class="memitem:a91031d893725b0863f46754d64c1b23d"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classset_1_1HashSet.html#a91031d893725b0863f46754d64c1b23d">sprint</a> ()=0</td></tr>
+<tr class="memdesc:a91031d893725b0863f46754d64c1b23d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print information on a string.  <a href="#a91031d893725b0863f46754d64c1b23d">More...</a><br /></td></tr>
 <tr class="separator:a91031d893725b0863f46754d64c1b23d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdd075bcb2e16c972bc38859dbf5651e"><td class="memItemLeft" align="right" valign="top"><a id="abdd075bcb2e16c972bc38859dbf5651e"></a>
-<a class="el" href="classset_1_1HashNode.html">HashNode</a>&lt; K, V &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (size_t pos)</td></tr>
-<tr class="separator:abdd075bcb2e16c972bc38859dbf5651e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01596317a427c4dd6b3e0658ca7b4c09"><td class="memItemLeft" align="right" valign="top"><a id="a01596317a427c4dd6b3e0658ca7b4c09"></a>
-K *&#160;</td><td class="memItemRight" valign="bottom"><b>keys</b> ()</td></tr>
+<tr class="memitem:a8de66e60433d68d17eb78c3136e25102"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classset_1_1HashNode.html">HashNode</a>&lt; K, V &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classset_1_1HashSet.html#a8de66e60433d68d17eb78c3136e25102">get</a> (size_t pos) const</td></tr>
+<tr class="memdesc:a8de66e60433d68d17eb78c3136e25102"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getting an item.  <a href="#a8de66e60433d68d17eb78c3136e25102">More...</a><br /></td></tr>
+<tr class="separator:a8de66e60433d68d17eb78c3136e25102"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01596317a427c4dd6b3e0658ca7b4c09"><td class="memItemLeft" align="right" valign="top">K *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classset_1_1HashSet.html#a01596317a427c4dd6b3e0658ca7b4c09">keys</a> ()</td></tr>
+<tr class="memdesc:a01596317a427c4dd6b3e0658ca7b4c09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getting all keys.  <a href="#a01596317a427c4dd6b3e0658ca7b4c09">More...</a><br /></td></tr>
 <tr class="separator:a01596317a427c4dd6b3e0658ca7b4c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a29efdba12e8afa9e6de30f4409d9b0"><td class="memItemLeft" align="right" valign="top"><a id="a5a29efdba12e8afa9e6de30f4409d9b0"></a>
-V *&#160;</td><td class="memItemRight" valign="bottom"><b>values</b> ()</td></tr>
+<tr class="memitem:a5a29efdba12e8afa9e6de30f4409d9b0"><td class="memItemLeft" align="right" valign="top">V *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classset_1_1HashSet.html#a5a29efdba12e8afa9e6de30f4409d9b0">values</a> ()</td></tr>
+<tr class="memdesc:a5a29efdba12e8afa9e6de30f4409d9b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getting all values.  <a href="#a5a29efdba12e8afa9e6de30f4409d9b0">More...</a><br /></td></tr>
 <tr class="separator:a5a29efdba12e8afa9e6de30f4409d9b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06c86ac4008e5437ee2c1a5fecc68091"><td class="memItemLeft" align="right" valign="top"><a id="a06c86ac4008e5437ee2c1a5fecc68091"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isAvailable</b> (size_t i)</td></tr>
+<tr class="memitem:a06c86ac4008e5437ee2c1a5fecc68091"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classset_1_1HashSet.html#a06c86ac4008e5437ee2c1a5fecc68091">isAvailable</a> (size_t i)</td></tr>
+<tr class="memdesc:a06c86ac4008e5437ee2c1a5fecc68091"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checking location availability.  <a href="#a06c86ac4008e5437ee2c1a5fecc68091">More...</a><br /></td></tr>
 <tr class="separator:a06c86ac4008e5437ee2c1a5fecc68091"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d129719fc570b9d5044e6317ad01316"><td class="memItemLeft" align="right" valign="top"><a id="a9d129719fc570b9d5044e6317ad01316"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAvailable</b> (size_t i)</td></tr>
+<tr class="memitem:a9d129719fc570b9d5044e6317ad01316"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classset_1_1HashSet.html#a9d129719fc570b9d5044e6317ad01316">setAvailable</a> (size_t i)</td></tr>
+<tr class="memdesc:a9d129719fc570b9d5044e6317ad01316"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setting location availability.  <a href="#a9d129719fc570b9d5044e6317ad01316">More...</a><br /></td></tr>
 <tr class="separator:a9d129719fc570b9d5044e6317ad01316"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c37e8755ad7adb31be0975ec47fc73b"><td class="memItemLeft" align="right" valign="top"><a id="a2c37e8755ad7adb31be0975ec47fc73b"></a>
-const <a class="el" href="classset_1_1HashNode.html">HashNode</a>&lt; K, V &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (int nIndex) const</td></tr>
-<tr class="separator:a2c37e8755ad7adb31be0975ec47fc73b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab72e26452fc503ca49e0ffa28bfd1e48"><td class="memItemLeft" align="right" valign="top"><a id="ab72e26452fc503ca49e0ffa28bfd1e48"></a>
-<a class="el" href="classset_1_1HashSet_1_1Iterator.html">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () const</td></tr>
+<tr class="memitem:ad28de21846ca080aa4b78592c04ee092"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classset_1_1HashNode.html">HashNode</a>&lt; K, V &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classset_1_1HashSet.html#ad28de21846ca080aa4b78592c04ee092">operator[]</a> (size_t index) const</td></tr>
+<tr class="memdesc:ad28de21846ca080aa4b78592c04ee092"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator[] overloading.  <a href="#ad28de21846ca080aa4b78592c04ee092">More...</a><br /></td></tr>
+<tr class="separator:ad28de21846ca080aa4b78592c04ee092"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab72e26452fc503ca49e0ffa28bfd1e48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classset_1_1HashSet_1_1Iterator.html">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classset_1_1HashSet.html#ab72e26452fc503ca49e0ffa28bfd1e48">begin</a> () const</td></tr>
+<tr class="memdesc:ab72e26452fc503ca49e0ffa28bfd1e48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collection starting point.  <a href="#ab72e26452fc503ca49e0ffa28bfd1e48">More...</a><br /></td></tr>
 <tr class="separator:ab72e26452fc503ca49e0ffa28bfd1e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ddde050223b2c8010768cfbaa7f3c58"><td class="memItemLeft" align="right" valign="top"><a id="a2ddde050223b2c8010768cfbaa7f3c58"></a>
-<a class="el" href="classset_1_1HashSet_1_1Iterator.html">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () const</td></tr>
+<tr class="memitem:a2ddde050223b2c8010768cfbaa7f3c58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classset_1_1HashSet_1_1Iterator.html">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classset_1_1HashSet.html#a2ddde050223b2c8010768cfbaa7f3c58">end</a> () const</td></tr>
+<tr class="memdesc:a2ddde050223b2c8010768cfbaa7f3c58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collection ending point.  <a href="#a2ddde050223b2c8010768cfbaa7f3c58">More...</a><br /></td></tr>
 <tr class="separator:a2ddde050223b2c8010768cfbaa7f3c58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename K, typename V&gt;<br />
+class set::HashSet&lt; K, V &gt;</h3>
+
+<p>Class representing generic <a class="el" href="classset_1_1HashSet.html">HashSet</a> Its nodes are generic <a class="el" href="classset_1_1HashNode.html">HashNode</a> </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a7fb4e7c1dcd36ceadfcf49cb068e3fd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fb4e7c1dcd36ceadfcf49cb068e3fd1">&#9670;&nbsp;</a></span>HashSet() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K, typename V&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">HashSet::HashSet </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classset_1_1HashNode.html">HashNode</a>&lt; K, V &gt; *&#160;</td>
+          <td class="paramname"><em>initNode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+<p>Constructor with all fields </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>capacity </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">initNode</td><td>init value for all nodes </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa5dddb18a32142b20d7643ee704bc0d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5dddb18a32142b20d7643ee704bc0d2">&#9670;&nbsp;</a></span>HashSet() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K, typename V&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">HashSet::HashSet </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classset_1_1HashSet.html">HashSet</a>&lt; K, V &gt; &amp;&#160;</td>
+          <td class="paramname"><em>hashset</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+<p>Copy constructor </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hashset</td><td>reference to <a class="el" href="classset_1_1HashSet.html">HashSet</a> to be copied </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab72e26452fc503ca49e0ffa28bfd1e48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab72e26452fc503ca49e0ffa28bfd1e48">&#9670;&nbsp;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classset_1_1HashSet.html">HashSet</a>&lt; K, V &gt;::<a class="el" href="classset_1_1HashSet_1_1Iterator.html">Iterator</a> HashSet::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Collection starting point. </p>
+<p>Defining collection starting point, requested by iterator design pattern </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="classset_1_1HashSet_1_1Iterator.html">Iterator</a> of the collection </dd></dl>
+
+</div>
+</div>
+<a id="a2ddde050223b2c8010768cfbaa7f3c58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ddde050223b2c8010768cfbaa7f3c58">&#9670;&nbsp;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classset_1_1HashSet.html">HashSet</a>&lt; K, V &gt;::<a class="el" href="classset_1_1HashSet_1_1Iterator.html">Iterator</a> HashSet::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Collection ending point. </p>
+<p>Defining collection ending point, requested by iterator design pattern </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="classset_1_1HashSet_1_1Iterator.html">Iterator</a> of the collection </dd></dl>
+
+</div>
+</div>
+<a id="a07d95281ac5420e3d625924faf81341d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07d95281ac5420e3d625924faf81341d">&#9670;&nbsp;</a></span>findItem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K, typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">V HashSet::findItem </td>
+          <td>(</td>
+          <td class="paramtype">const K &amp;&#160;</td>
+          <td class="paramname"><em>k</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classset_1_1Item.html">Item</a> searching. </p>
+<p>First item with the specified key is searched </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">k</td><td>reference to key </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>value of searched item </dd></dl>
+
+</div>
+</div>
+<a id="a8de66e60433d68d17eb78c3136e25102"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8de66e60433d68d17eb78c3136e25102">&#9670;&nbsp;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classset_1_1HashNode.html">HashNode</a>&lt; K, V &gt; * HashSet::get </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getting an item. </p>
+<p>The item of the set, at the given position, is returned. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pos</td><td>position of the item to return </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>pointer to returned <a class="el" href="classset_1_1HashNode.html">HashNode</a> </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classset_1_1HashSet_a8de66e60433d68d17eb78c3136e25102_icgraph.png" border="0" usemap="#classset_1_1HashSet_a8de66e60433d68d17eb78c3136e25102_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ad1e20cbb91b3971ff018d2433d26b7ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1e20cbb91b3971ff018d2433d26b7ca">&#9670;&nbsp;</a></span>hashCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K, typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t HashSet::hashCode </td>
+          <td>(</td>
+          <td class="paramtype">const K &amp;&#160;</td>
+          <td class="paramname"><em>k</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Hash function. </p>
+<p>Function defined through % operator. The index of the set to put item with the specified key is calculated with the following formula: $$ index= |k| \mbox{ % } capacity $$ </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">k</td><td>reference to key </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>calculated index </dd></dl>
+
+</div>
+</div>
+<a id="a56cc237b15b1bb447a9e38eec874f99f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56cc237b15b1bb447a9e38eec874f99f">&#9670;&nbsp;</a></span>insertItemLP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K, typename V&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t HashSet::insertItemLP </td>
+          <td>(</td>
+          <td class="paramtype">const K &amp;&#160;</td>
+          <td class="paramname"><em>k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const V &amp;&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Linear Probing insertion. </p>
+<p>Function performing insertion of a node, with specified key and value, with Linear Probing algorithm. 1) if set is full, function returns; 2) starting index (named ( hashIndex ) is calculated through hash function; 3) if location is available, node is inserted at that index; 4) if location is not available, index is changed linearly with the formula: $$ hashIndex = hashIndex + j, j=0,1,2,... $$ until an available location is found. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">k</td><td>reference to key </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>reference to value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>attempts before inserting item (only for performance testing purpose) </dd></dl>
+
+</div>
+</div>
+<a id="ad3b71c8431beb863dd83b120a7459304"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3b71c8431beb863dd83b120a7459304">&#9670;&nbsp;</a></span>insertItemQP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K, typename V&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t HashSet::insertItemQP </td>
+          <td>(</td>
+          <td class="paramtype">const K &amp;&#160;</td>
+          <td class="paramname"><em>k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const V &amp;&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Quadratic Probing insertion. </p>
+<p>Function performing insertion of a node, with specified key and value, with Quadratic Probing algorithm. 1) if set is full, function returns; 2) starting index (named ( hashIndex ) is calculated through hash function; 3) if location is available, node is inserted at that index; 4) if location is not available, index is changed with the formula: $$ hashIndex = hashIndex + j^2, j=0,1,2,... $$ until an available location is found. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">k</td><td>reference to key </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>reference to value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>attempts before inserting item (only for performance testing purpose) </dd></dl>
+
+</div>
+</div>
+<a id="a06c86ac4008e5437ee2c1a5fecc68091"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06c86ac4008e5437ee2c1a5fecc68091">&#9670;&nbsp;</a></span>isAvailable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HashSet::isAvailable </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checking location availability. </p>
+<p>The function checks if position specified is available for inserting new items. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>position of the set to be checked </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if available, false otherwise </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>This method is virtual, because in derived classes availability checking depends on the types. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classset_1_1HashSetItem.html#a16f17d7ce80a44cef4013058429e5b41">set::HashSetItem</a>, and <a class="el" href="classset_1_1HashSetInt.html#aeae4a057c8895553f9b4efa53572c113">set::HashSetInt</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classset_1_1HashSet_a06c86ac4008e5437ee2c1a5fecc68091_icgraph.png" border="0" usemap="#classset_1_1HashSet_a06c86ac4008e5437ee2c1a5fecc68091_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ae08ed979e6663bce1dec8dfec80ccce7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae08ed979e6663bce1dec8dfec80ccce7">&#9670;&nbsp;</a></span>isEmpty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HashSet::isEmpty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check set emptiness. </p>
+<p>Check if items number is zero </p><dl class="section return"><dt>Returns</dt><dd>true if set is empty, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a01596317a427c4dd6b3e0658ca7b4c09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01596317a427c4dd6b3e0658ca7b4c09">&#9670;&nbsp;</a></span>keys()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">K * HashSet::keys </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getting all keys. </p>
+<p>All keys of the set are returned. </p><dl class="section return"><dt>Returns</dt><dd>array of keys of the set </dd></dl>
+
+</div>
+</div>
+<a id="ad28de21846ca080aa4b78592c04ee092"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad28de21846ca080aa4b78592c04ee092">&#9670;&nbsp;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classset_1_1HashNode.html">HashNode</a>&lt; K, V &gt; &amp; HashSet::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Operator[] overloading. </p>
+<p>Defining operator [] behaviour </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>position of item to return </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>reference to <a class="el" href="classset_1_1HashNode.html">HashNode</a> at given position </dd></dl>
+
+</div>
+</div>
+<a id="a153652e57edac639cbfb6bb7b1112152"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a153652e57edac639cbfb6bb7b1112152">&#9670;&nbsp;</a></span>removeItem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K, typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">V HashSet::removeItem </td>
+          <td>(</td>
+          <td class="paramtype">const K &amp;&#160;</td>
+          <td class="paramname"><em>k</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classset_1_1Item.html">Item</a> removal. </p>
+<p>First item with the specified key is removed </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">k</td><td>reference to key </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>value of removed item </dd></dl>
+
+</div>
+</div>
+<a id="a9d129719fc570b9d5044e6317ad01316"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d129719fc570b9d5044e6317ad01316">&#9670;&nbsp;</a></span>setAvailable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HashSet::setAvailable </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Setting location availability. </p>
+<p>The function makes position specified available for inserting new items. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>position of the set to be checked </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section remark"><dt>Remarks</dt><dd>This method is virtual, because in derived classes availability checking depends on the types. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classset_1_1HashSetItem.html#a56bfd7246aa0b5a1b062909729bd3213">set::HashSetItem</a>, and <a class="el" href="classset_1_1HashSetInt.html#ab9334aeb7d542d941161cb23c4c81f7e">set::HashSetInt</a>.</p>
+
+</div>
+</div>
+<a id="a9dde7aabc4a19551031433df1f007d7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dde7aabc4a19551031433df1f007d7e">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t HashSet::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get set size. </p>
+<p>Get the number of items in the set </p><dl class="section return"><dt>Returns</dt><dd>number of items </dd></dl>
+
+</div>
+</div>
+<a id="a91031d893725b0863f46754d64c1b23d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91031d893725b0863f46754d64c1b23d">&#9670;&nbsp;</a></span>sprint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K, typename V&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual string <a class="el" href="classset_1_1HashSet.html">set::HashSet</a>&lt; K, V &gt;::sprint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Print information on a string. </p>
+<p>A string with information of all items of the set is built. </p><dl class="section return"><dt>Returns</dt><dd>information string </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>This is a pure virtual method, it needs to be implemented by derived class(es), where types are not generic anymore, so a dedicated conversion to string is possible. </dd></dl>
+
+<p>Implemented in <a class="el" href="classset_1_1HashSetItem.html#a9b1b2eb15999fc97ee2a409ada5f6078">set::HashSetItem</a>, and <a class="el" href="classset_1_1HashSetInt.html#a6b28f212f92436042dd4467666525597">set::HashSetInt</a>.</p>
+
+</div>
+</div>
+<a id="a5a29efdba12e8afa9e6de30f4409d9b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a29efdba12e8afa9e6de30f4409d9b0">&#9670;&nbsp;</a></span>values()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">V * HashSet::values </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getting all values. </p>
+<p>All values of the set are returned. </p><dl class="section return"><dt>Returns</dt><dd>array of values of the set </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="HashSet_8hpp_source.html">HashSet.hpp</a></li>
 <li>src/HashSet.cpp</li>
@@ -147,7 +713,7 @@ const <a class="el" href="classset_1_1HashNode.html">HashNode</a>&lt; K, V &gt; 
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 4 2020 15:34:43 for SetHashTable by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 7 2020 01:24:54 for SetHashTable by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>

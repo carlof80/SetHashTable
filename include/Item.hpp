@@ -59,7 +59,7 @@ public:
     bool   isOnDiscount() const;
     void  setOnDiscount(bool d);
     size_t getStock() const;
-    void  setStock(int s);
+    void   setStock(size_t s);
 
     virtual string sprint();
 

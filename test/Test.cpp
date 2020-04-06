@@ -220,6 +220,9 @@ TEST_CASE("Probing Set Test", "[ProbingSetTest]")
     h1->insertItemLP(1, 74);
     size_t attemptsLP = h1->insertItemLP(2, 37);
     std::cout << h1->sprint() << "\n\n";
+    float loadFactorLP =
+        static_cast<float>(h1->size()) / static_cast<float>(CAPACITY);
+    std::cout << "Load factor 1: " << loadFactorLP << endl;
     delete h1;
     HashSetInt* h2 = new HashSetInt(CAPACITY);
     h2->insertItemQP(7, 2);
@@ -233,6 +236,9 @@ TEST_CASE("Probing Set Test", "[ProbingSetTest]")
     h2->insertItemQP(1, 74);
     size_t attemptsQP = h2->insertItemQP(2, 37);
     std::cout << h2->sprint() << "\n\n";
+    float loadFactorQP =
+        static_cast<float>(h2->size()) / static_cast<float>(CAPACITY);
+    std::cout << "Load factor 2: " << loadFactorQP << endl;
     std::cout << "LP: " << attemptsLP << "\n";
     std::cout << "QP: " << attemptsQP << "\n";
     REQUIRE(attemptsLP < attemptsQP);
@@ -243,7 +249,7 @@ TEST_CASE("Time Test", "TimeTest]")
 {
     std::cout
         << "---------------------------------------------------------------\n";
-    std::cout << "\Time Test\n";
+    std::cout << "\nTime Test\n";
     std::cout
         << "---------------------------------------------------------------\n";
     Item* item1 = new Food("AIA", "Chicken", 2.65f, false, 27, FoodType::MEAT);

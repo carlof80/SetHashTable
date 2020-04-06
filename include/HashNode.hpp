@@ -45,6 +45,7 @@ namespace set
 template<typename K, typename V> class HashNode
 {
 public:
+
     /**
      * @brief Default constructor
      */

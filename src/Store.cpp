@@ -90,12 +90,12 @@ void Store::setAddress(string a)
     _address = a;
 }
 
-int Store::getAnnualRevenue() const
+size_t Store::getAnnualRevenue() const
 {
     return _annual_revenue;
 }
 
-void Store::setAnnualRevenue(int r)
+void Store::setAnnualRevenue(size_t r)
 {
     if (r < 0)
     {
@@ -227,7 +227,7 @@ void Store::updateItem(size_t k,
                        string m,
                        float  new_price,
                        bool   on_discount,
-                       int    new_stock)
+                       size_t new_stock)
 {
     Item* item = _collection->findItem(k);
     item->brand = b;
@@ -240,9 +240,9 @@ void Store::updateItem(size_t k,
     _collection->insertItemLP(k, item);*/
 }
 
-int Store::totalStock()
+size_t Store::totalStock()
 {
-    int  stocked    = 0;
+    size_t  stocked    = 0;
     size_t* key_values = _collection->keys();
 
     for (size_t i = 0; i < getItemsNumber(); i++)

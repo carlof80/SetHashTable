@@ -56,8 +56,8 @@ public:
     void   setName(string n);
     string getAddress() const;
     void   setAddress(string a);
-    int    getAnnualRevenue() const;
-    void   setAnnualRevenue(int r);
+    size_t getAnnualRevenue() const;
+    void   setAnnualRevenue(size_t r);
     string sprintItems();
     string sprintAll(); 
     string sprintItemsOf();
@@ -71,13 +71,13 @@ public:
                       string m,
                       float  new_price,
                       bool   on_discount,
-                      int    new_stock);
-    int    totalStock();
+                      size_t new_stock);
+    size_t totalStock();
 
 private:
     string       _name;
     string       _address;
-    int          _annual_revenue;
+    size_t       _annual_revenue;
     HashSetItem* _collection;
 };
 } // namespace set

@@ -79,22 +79,143 @@ $(function() {
 <div class="title">set::HashSet&lt; K, V &gt;::Iterator Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="HashSet_8hpp_source.html">HashSet.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aef65bef5742ec4df075640f78246804b"><td class="memItemLeft" align="right" valign="top"><a id="aef65bef5742ec4df075640f78246804b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Iterator</b> (const <a class="el" href="classset_1_1HashSet.html">HashSet</a>&lt; K, V &gt; *set, size_t nIndex)</td></tr>
-<tr class="separator:aef65bef5742ec4df075640f78246804b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ba51c4e8c26797f370198d2ff47cddf"><td class="memItemLeft" align="right" valign="top"><a id="a1ba51c4e8c26797f370198d2ff47cddf"></a>
-const <a class="el" href="classset_1_1HashNode.html">HashNode</a>&lt; K, V &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator *</b> () const</td></tr>
+<tr class="memitem:adc7a3e0431bdab12124444d868a918c1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classset_1_1HashSet_1_1Iterator.html#adc7a3e0431bdab12124444d868a918c1">Iterator</a> (const <a class="el" href="classset_1_1HashSet.html">HashSet</a>&lt; K, V &gt; *set, size_t index)</td></tr>
+<tr class="memdesc:adc7a3e0431bdab12124444d868a918c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#adc7a3e0431bdab12124444d868a918c1">More...</a><br /></td></tr>
+<tr class="separator:adc7a3e0431bdab12124444d868a918c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ba51c4e8c26797f370198d2ff47cddf"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classset_1_1HashNode.html">HashNode</a>&lt; K, V &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classset_1_1HashSet_1_1Iterator.html#a1ba51c4e8c26797f370198d2ff47cddf">operator *</a> () const</td></tr>
+<tr class="memdesc:a1ba51c4e8c26797f370198d2ff47cddf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator* overloading.  <a href="#a1ba51c4e8c26797f370198d2ff47cddf">More...</a><br /></td></tr>
 <tr class="separator:a1ba51c4e8c26797f370198d2ff47cddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d9a0c965953ddee18353653ad22ff3e"><td class="memItemLeft" align="right" valign="top"><a id="a0d9a0c965953ddee18353653ad22ff3e"></a>
-<a class="el" href="classset_1_1HashSet_1_1Iterator.html">Iterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator++</b> ()</td></tr>
+<tr class="memitem:a0d9a0c965953ddee18353653ad22ff3e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classset_1_1HashSet_1_1Iterator.html">Iterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classset_1_1HashSet_1_1Iterator.html#a0d9a0c965953ddee18353653ad22ff3e">operator++</a> ()</td></tr>
+<tr class="memdesc:a0d9a0c965953ddee18353653ad22ff3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator++ overloading.  <a href="#a0d9a0c965953ddee18353653ad22ff3e">More...</a><br /></td></tr>
 <tr class="separator:a0d9a0c965953ddee18353653ad22ff3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4724bd62fdb4f92147b6b55f0652fc48"><td class="memItemLeft" align="right" valign="top"><a id="a4724bd62fdb4f92147b6b55f0652fc48"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="classset_1_1HashSet_1_1Iterator.html">Iterator</a> &amp;other) const</td></tr>
+<tr class="memitem:a4724bd62fdb4f92147b6b55f0652fc48"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classset_1_1HashSet_1_1Iterator.html#a4724bd62fdb4f92147b6b55f0652fc48">operator!=</a> (const <a class="el" href="classset_1_1HashSet_1_1Iterator.html">Iterator</a> &amp;other) const</td></tr>
+<tr class="memdesc:a4724bd62fdb4f92147b6b55f0652fc48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator!= overloading.  <a href="#a4724bd62fdb4f92147b6b55f0652fc48">More...</a><br /></td></tr>
 <tr class="separator:a4724bd62fdb4f92147b6b55f0652fc48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename K, typename V&gt;<br />
+class set::HashSet&lt; K, V &gt;::Iterator</h3>
+
+<p>Inner class representing custom iterator </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="adc7a3e0431bdab12124444d868a918c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc7a3e0431bdab12124444d868a918c1">&#9670;&nbsp;</a></span>Iterator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K, typename V&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">HashSet::Iterator::Iterator </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classset_1_1HashSet.html">HashSet</a>&lt; K, V &gt; *&#160;</td>
+          <td class="paramname"><em>set</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+<p>Constructor with all fields </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">set</td><td>pointer to <a class="el" href="classset_1_1HashSet.html">HashSet</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>collection index </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1ba51c4e8c26797f370198d2ff47cddf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ba51c4e8c26797f370198d2ff47cddf">&#9670;&nbsp;</a></span>operator *()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classset_1_1HashNode.html">HashNode</a>&lt; K, V &gt; &amp; HashSet::Iterator::operator * </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Operator* overloading. </p>
+<p>Defining operator * behaviour </p><dl class="section return"><dt>Returns</dt><dd>reference to <a class="el" href="classset_1_1HashNode.html">HashNode</a> </dd></dl>
+
+</div>
+</div>
+<a id="a4724bd62fdb4f92147b6b55f0652fc48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4724bd62fdb4f92147b6b55f0652fc48">&#9670;&nbsp;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K, typename V&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HashSet::Iterator::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classset_1_1HashSet_1_1Iterator.html">Iterator</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Operator!= overloading. </p>
+<p>Defining operator != behaviour </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>reference to constant <a class="el" href="classset_1_1HashSet_1_1Iterator.html">Iterator</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if this and other are different, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a0d9a0c965953ddee18353653ad22ff3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d9a0c965953ddee18353653ad22ff3e">&#9670;&nbsp;</a></span>operator++()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classset_1_1HashSet.html">HashSet</a>&lt; K, V &gt;::<a class="el" href="classset_1_1HashSet_1_1Iterator.html">Iterator</a> &amp; HashSet::Iterator::operator++ </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Operator++ overloading. </p>
+<p>Defining operator ++ behaviour (pre-increment) </p><dl class="section return"><dt>Returns</dt><dd>reference to <a class="el" href="classset_1_1HashSet_1_1Iterator.html">Iterator</a> </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="HashSet_8hpp_source.html">HashSet.hpp</a></li>
 <li>src/HashSet.cpp</li>
@@ -102,7 +223,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 4 2020 15:34:43 for SetHashTable by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 7 2020 01:24:54 for SetHashTable by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>

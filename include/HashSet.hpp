@@ -43,50 +43,242 @@ using namespace std;
 
 namespace set
 {
+
+/**
+ *  Class representing generic HashSet
+ *  Its nodes are generic HashNode
+ */
 template<typename K, typename V> class HashSet
 {
 public:
+    /**
+     *  Inner class representing custom iterator
+     */
     class Iterator
     {
     public:
-        Iterator(const HashSet<K, V>* set, size_t nIndex);
+        /**
+         * @brief Constructor
+         * @details Constructor with all fields
+         * @param[in] set pointer to HashSet
+         * @param[in] index collection index
+         */
+        Iterator(const HashSet<K, V>* set, size_t index);
+
+        /**
+         * @brief Operator* overloading
+         * @details Defining operator * behaviour
+         * @return reference to HashNode
+         */
         const HashNode<K, V>& operator*() const;
-        Iterator&             operator++();
-        bool                  operator!=(const Iterator& other) const;
+
+        /**
+         * @brief Operator++ overloading
+         * @details Defining operator ++ behaviour (pre-increment)
+         * @return reference to Iterator
+         */
+        Iterator& operator++();
+
+        /**
+         * @brief Operator!= overloading
+         * @details Defining operator != behaviour
+         * @param[in] other reference to constant Iterator
+         * @return true if this and other are different, false otherwise
+         */
+        bool operator!=(const Iterator& other) const;
 
     private:
-        const HashSet<K, V>* m_pSet;
-        size_t               m_nIndex = -1;
+        const HashSet<K, V>* _set;        /*!< Pointer to HashSet */
+        size_t               _index = -1; /*!< Collection index */
     };
 
+    /**
+     * @brief Default constructor
+     */
+    explicit HashSet() = default;
+
+    /**
+     * @brief Constructor
+     * @details Constructor with all fields
+     * @param[in] c capacity
+     * @param[in] initNode init value for all nodes
+     */
     HashSet(size_t c, HashNode<K, V>* initNode);
-    HashSet(const HashSet<K, V>& hashset); // copy constructor
+
+    /**
+     * @brief Constructor
+     * @details Copy constructor
+     * @param[in] hashset reference to HashSet to be copied
+     */
+    HashSet(const HashSet<K, V>& hashset);
+
+    /**
+     * @brief Destructor
+     */
     virtual ~HashSet();
 
-    size_t                size() const;
-    bool                  isEmpty() const;
-    size_t                hashCode(const K& k) const;
-    size_t                insertItemLP(const K& k, const V& v);
-    size_t                insertItemQP(const K& k, const V& v);
-    V                     removeItem(const K& k);
-    V                     findItem(const K& k);
-    virtual string        sprint() = 0;
-    HashNode<K, V>*       get(size_t pos) const;
-    K*                    keys();
-    V*                    values();
-    virtual bool          isAvailable(size_t i);
-    virtual void          setAvailable(size_t i);
-    const HashNode<K, V>& operator[](int nIndex) const;
-    Iterator              begin() const;
-    Iterator              end() const;
+    /**
+     * @brief Get set size
+     * @details Get the number of items in the set
+     * @return number of items
+     */
+    size_t size() const;
+
+    /**
+     * @brief Check set emptiness
+     * @details Check if items number is zero
+     * @return true if set is empty, false otherwise
+     */
+    bool isEmpty() const;
+
+    /**
+     * @brief Hash function
+     * @details Function defined through % operator. The index of the set to put
+     * item with the specified key is calculated with the following formula:
+     * $$ index= |k| \mbox{ % } capacity $$
+     * @param[in] k reference to key
+     * @return calculated index
+     */
+    size_t hashCode(const K& k) const;
+
+    /**
+     * @brief Linear Probing insertion
+     * @details Function performing insertion of a node, with specified key and
+     * value, with Linear Probing algorithm.
+     * 1) if set is full, function returns;
+     * 2) starting index (named \( hashIndex \) is calculated through hash
+     * function;
+     * 3) if location is available, node is inserted at that index;
+     * 4) if location is not available, index is changed linearly with the
+     * formula:
+     * $$ hashIndex = hashIndex + j, j=0,1,2,... $$
+     * until an available location is found.
+     * @param[in] k reference to key
+     * @param[in] v reference to value
+     * @return attempts before inserting item (only for performance testing
+     * purpose)
+     */
+    size_t insertItemLP(const K& k, const V& v);
+
+    /**
+     * @brief Quadratic Probing insertion
+     * @details Function performing insertion of a node, with specified key and
+     * value, with Quadratic Probing algorithm.
+     * 1) if set is full, function returns;
+     * 2) starting index (named \( hashIndex \) is calculated through hash
+     * function;
+     * 3) if location is available, node is inserted at that index;
+     * 4) if location is not available, index is changed with the formula:
+     * $$ hashIndex = hashIndex + j^2, j=0,1,2,... $$
+     * until an available location is found.
+     * @param[in] k reference to key
+     * @param[in] v reference to value
+     * @return attempts before inserting item (only for performance testing
+     * purpose)
+     */
+    size_t insertItemQP(const K& k, const V& v);
+
+    /**
+     * @brief Item removal
+     * @details First item with the specified key is removed
+     * @param[in] k reference to key
+     * @return value of removed item
+     */
+    V removeItem(const K& k);
+
+    /**
+     * @brief Item searching
+     * @details First item with the specified key is searched
+     * @param[in] k reference to key
+     * @return value of searched item
+     */
+    V findItem(const K& k);
+
+    /**
+     * @brief Print information on a string
+     * @details A string with information of all items of the set is built.
+     * @return information string
+     * @remarks This is a pure virtual method, it needs to be implemented by
+     * derived class(es), where types are not generic anymore, so a dedicated
+     * conversion to string is possible.
+     */
+    virtual string sprint() = 0;
+
+    /**
+     * @brief Getting an item
+     * @details The item of the set, at the given position, is returned.
+     * @param[in] pos position of the item to return
+     * @return pointer to returned HashNode
+     */
+    HashNode<K, V>* get(size_t pos) const;
+
+    /**
+     * @brief Getting all keys
+     * @details All keys of the set are returned.
+     * @return array of keys of the set
+     */
+    K* keys();
+
+    /**
+     * @brief Getting all values
+     * @details All values of the set are returned.
+     * @return array of values of the set
+     */
+    V* values();
+
+    /**
+     * @brief Checking location availability
+     * @details The function checks if position specified is available for
+     * inserting new items.
+     * @param[in] i position of the set to be checked
+     * @return true if available, false otherwise
+     * @remarks This method is virtual, because in derived classes availability
+     * checking depends on the types.
+     */
+    virtual bool isAvailable(size_t i);
+
+    /**
+     * @brief Setting location availability
+     * @details The function makes position specified available for
+     * inserting new items.
+     * @param[in] i position of the set to be checked
+     * @remarks This method is virtual, because in derived classes availability
+     * checking depends on the types.
+     */
+    virtual void setAvailable(size_t i);
+
+    /**
+     * @brief Operator[] overloading
+     * @details Defining operator [] behaviour
+     * @param[in] index position of item to return
+     * @return reference to HashNode at given position
+     */
+    const HashNode<K, V>& operator[](size_t index) const;
+
+    /**
+     * @brief Collection starting point
+     * @details Defining collection starting point, requested by iterator design
+     * pattern
+     * @return Iterator of the collection
+     */
+    Iterator begin() const;
+
+    /**
+     * @brief Collection ending point
+     * @details Defining collection ending point, requested by iterator design
+     * pattern
+     * @return Iterator of the collection
+     */
+    Iterator end() const;
 
 protected:
-    size_t capacity;
+    size_t capacity; /*!< Set capacity */
 
 private:
-    size_t                 _num_items;
-    HashNode<K, V>**       _items;
-    static HashNode<K, V>* AVAILABLE;
+    size_t           _num_items; /*!< Set items number */
+    HashNode<K, V>** _items;     /*!< Array of HashNodes */
+    static HashNode<K, V>*
+        AVAILABLE; /*!< Sentinel for node availability (class variable) */
 };
 
 template<typename K, typename V>

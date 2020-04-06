@@ -101,6 +101,10 @@ size_t HashSet<K, V>::insertItemLP(const K& k, const V& v)
     size_t          hashIndex = hashCode(k);
     size_t          counter   = 0;
 
+    if ( _num_items >= capacity)
+    {
+        return -1;
+    }
     while (!isAvailable(hashIndex))
     {
         hashIndex++;
@@ -128,7 +132,7 @@ size_t HashSet<K, V>::insertItemQP(const K& k, const V& v)
         hashIndex += (j * j);
         hashIndex %= capacity;
         j++;
-        if (++counter > capacity) // to avoid infinite loop
+        if (++counter > 10 * capacity) // to avoid infinite loop
         {
             return capacity;
         }
@@ -248,30 +252,30 @@ typename HashSet<K, V>::Iterator HashSet<K, V>::end() const
  * Iterator methods
  **/
 template<typename K, typename V>
-HashSet<K, V>::Iterator::Iterator(const HashSet<K, V>* pVector, size_t nIndex) :
-    m_pSet(pVector), m_nIndex(nIndex)
+HashSet<K, V>::Iterator::Iterator(const HashSet<K, V>* pVector, size_t index) :
+    _set(pVector), _index(index)
 {}
 
 template<typename K, typename V>
-const HashNode<K, V>& HashSet<K, V>::operator[](int nIndex) const
+const HashNode<K, V>& HashSet<K, V>::operator[](size_t index) const
 {
-    if (nIndex >= capacity)
+    if (index >= capacity)
     {
         return NULL;
     }
-    return _items[nIndex];
+    return _items[index];
 }
 
 template<typename K, typename V>
 const HashNode<K, V>& HashSet<K, V>::Iterator::operator*() const
 {
-    return m_pSet->operator[](m_nIndex);
+    return _set->operator[](_index);
 }
 
 template<typename K, typename V>
 typename HashSet<K, V>::Iterator& HashSet<K, V>::Iterator::operator++()
 {
-    ++m_nIndex;
+    ++_index;
     return *this;
 }
 
@@ -279,5 +283,5 @@ template<typename K, typename V>
 bool HashSet<K, V>::Iterator::operator!=(
     const HashSet<K, V>::Iterator& other) const
 {
-    return m_nIndex != other.m_nIndex;
+    return _index != other._index;
 }

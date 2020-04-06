@@ -92,7 +92,7 @@ size_t Item::getStock() const
     return stock;
 }
 
-void Item::setStock(int s)
+void Item::setStock(size_t s)
 {
     if (s >= 0)
     {
