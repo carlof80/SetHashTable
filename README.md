@@ -1,4 +1,4 @@
-## Cosa include il progetto ##
+## Descrizione progetto ##
 
 * `CMakeLists.txt`
     - compilazione con warning
@@ -101,7 +101,7 @@
 * `Test` file:
     - test funzionalita' di base e polimorfismo
 
-* **Altri note**:
+* **Altre note**:
     - codice all'interno di `namespace`
     - libreria `catch2` per il testing
     - metodi marcati `const`

@@ -180,19 +180,39 @@ public:
 
     /**
      * @brief Item removal
-     * @details First item with the specified key is removed
+     * @details Item with the specified key is removed, according to Linear
+     * Probing algorithm.
      * @param[in] k reference to key
      * @return value of removed item
      */
-    V removeItem(const K& k);
+    V removeItemLP(const K& k);
+
+    /**
+     * @brief Item removal
+     * @details Item with the specified key is removed, according to Quadratic
+     * Probing algorithm.
+     * @param[in] k reference to key
+     * @return value of removed item
+     */
+    V removeItemQP(const K& k);
 
     /**
      * @brief Item searching
-     * @details First item with the specified key is searched
+     * @details First item with the specified key is searched, according to Linear
+     * Probing algorithm
      * @param[in] k reference to key
      * @return value of searched item
      */
-    V findItem(const K& k);
+    V findItemLP(const K& k);
+
+    /**
+     * @brief Item searching
+     * @details First item with the specified key is searched, according to Quadratic
+     * Probing algorithm
+     * @param[in] k reference to key
+     * @return value of searched item
+     */
+    V findItemQP(const K& k);
 
     /**
      * @brief Print information on a string

@@ -72,9 +72,9 @@ string PersonalCareProduct::sprint()
     return result;
 }
 
-void PersonalCareProduct::copy(Item* item)
+void PersonalCareProduct::copy(Item& item)
 {
     Item::copy(item);
-    // PersonalCareProduct* i = dynamic_cast<PersonalCareProduct*>(item);
+    // PersonalCareProduct* i = dynamic_cast<PersonalCareProduct&>(item);
     // type = i->type;
 }

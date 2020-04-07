@@ -142,7 +142,7 @@ size_t HashSet<K, V>::insertItemQP(const K& k, const V& v)
     return counter;
 }
 
-template<typename K, typename V> V HashSet<K, V>::removeItem(const K& k)
+template<typename K, typename V> V HashSet<K, V>::removeItemLP(const K& k)
 {
     // Apply hash function to find index for given key
     size_t hashIndex = hashCode(k);
@@ -172,7 +172,39 @@ template<typename K, typename V> V HashSet<K, V>::removeItem(const K& k)
     return NULL;
 }
 
-template<typename K, typename V> V HashSet<K, V>::findItem(const K& k)
+template<typename K, typename V> V HashSet<K, V>::removeItemQP(const K& k)
+{
+    // Apply hash function to find index for given key
+    size_t hashIndex = hashCode(k);
+    size_t counter   = 0;
+    size_t j         = 0;
+    // finding the node with given key
+    while (_items[hashIndex] != NULL)
+    {
+        // if node found
+        if (_items[hashIndex]->key == k)
+        {
+            HashNode<K, V>* cleared = new HashNode<K, V>(_items[hashIndex]);
+            // Make removed node available
+            setAvailable(hashIndex);
+            // Reduce elements number
+            _num_items--;
+            return cleared->value;
+        }
+        hashIndex += (j * j);
+        j++;
+        hashIndex %= capacity;
+        if (++counter > capacity) // to avoid infinite loop
+        {
+            return NULL;
+        }
+    }
+
+    // If not found return null
+    return NULL;
+}
+
+template<typename K, typename V> V HashSet<K, V>::findItemLP(const K& k)
 {
     // If it is empty not found
     if (isEmpty())
@@ -191,6 +223,38 @@ template<typename K, typename V> V HashSet<K, V>::findItem(const K& k)
             return _items[hashIndex]->value;
         }
         hashIndex++;
+        hashIndex %= capacity;
+        if (++counter > capacity) // to avoid infinite loop
+        {
+            return NULL;
+        }
+    }
+
+    // If not found return null
+    return NULL;
+}
+
+template<typename K, typename V> V HashSet<K, V>::findItemQP(const K& k)
+{
+    // If it is empty not found
+    if (isEmpty())
+    {
+        return NULL;
+    }
+    // Apply hash function to find index for given key
+    size_t hashIndex = hashCode(k);
+    size_t counter   = 0;
+    size_t j         = 0;
+    // finding the node with given key
+    while (_items[hashIndex] != nullptr)
+    {
+        // if node found return its value
+        if (_items[hashIndex]->key == k)
+        {
+            return _items[hashIndex]->value;
+        }
+        hashIndex += (j * j);
+        j++;
         hashIndex %= capacity;
         if (++counter > capacity) // to avoid infinite loop
         {

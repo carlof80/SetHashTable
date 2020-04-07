@@ -138,8 +138,8 @@ string Food::sprint()
     return result;
 }
 
-void Food::copy(Item* item)
+void Food::copy(Item& item)
 {
     Item::copy(item);
-    _type = dynamic_cast<Food*>(item)->_type;
+    _type = dynamic_cast<Food&>(item)._type;
 }

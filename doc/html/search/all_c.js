@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['value',['value',['../classset_1_1HashNode.html#a23f7f30ab9e895aea2052218d6f93835',1,'set::HashNode']]],
-  ['values',['values',['../classset_1_1HashSet.html#a5a29efdba12e8afa9e6de30f4409d9b0',1,'set::HashSet']]]
+  ['removeitem',['removeItem',['../classset_1_1Store.html#a99f7df71cbbf862bc0a65b5f63068ffb',1,'set::Store']]],
+  ['removeitemlp',['removeItemLP',['../classset_1_1HashSet.html#af13b7ee5faf308ebe72bc2b5f4de4e90',1,'set::HashSet']]],
+  ['removeitemqp',['removeItemQP',['../classset_1_1HashSet.html#a94098f0ebd8c85aa54fa8682517cd824',1,'set::HashSet']]]
 ];

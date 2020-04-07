@@ -76,18 +76,18 @@ TEST_CASE("Set Test", "[SetTest]")
     h->insertItemLP(2, 7);
     h->insertItemLP(3, 1);
 
-    REQUIRE(h->findItem(2) == 7);
+    REQUIRE(h->findItemLP(2) == 7);
 
-    h->removeItem(2);
+    h->removeItemLP(2);
     h->insertItemLP(2, 42);
 
-    REQUIRE(h->findItem(2) == 42);
+    REQUIRE(h->findItemLP(2) == 42);
 
     h->insertItemLP(2, 17);
 
-    REQUIRE(h->findItem(2) == 42);
+    REQUIRE(h->findItemLP(2) == 42);
 
-    REQUIRE(h->removeItem(12) == NULL);
+    REQUIRE(h->removeItemLP(12) == NULL);
 
     // Copy test
     HashSetInt* h2 = new HashSetInt(*h);

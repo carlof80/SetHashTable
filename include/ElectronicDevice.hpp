@@ -73,7 +73,7 @@ public:
     /**
      * @brief Constructor
      * @details Copy constructor
-     * @param[in] electronic device reference to ElectronicDevice to be copied
+     * @param[in] ed device reference to ElectronicDevice to be copied
      * @see Item.hpp
      */
     ElectronicDevice(const ElectronicDevice& ed);
@@ -102,11 +102,11 @@ public:
     /**
      * @brief Copy Item
      * @details Item information are copied to this without creating it
-     * @param[in] item  pointer to Item to be copied
+     * @param[in] item  reference to Item to be copied
      * @return void
      * @see Item.hpp
      */
-    void copy(Item* item);
+    void copy(Item& item);
 
 private:
     ElectronicDeviceType

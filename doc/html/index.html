@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SetHashTable: Main Page</title>
+<title>SetHashTable: Cosa include il progetto</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -68,15 +68,121 @@ $(function() {
 </iframe>
 </div>
 
-<div class="header">
+<div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">SetHashTable Documentation</div>  </div>
+<div class="title">Cosa include il progetto </div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><ul>
+<li><code>CMakeLists.txt</code><ul>
+<li>compilazione con warning</li>
+<li>modalita' RELEASE, DEBUG, e SANITIZE</li>
+<li><em>valgrind</em> target (<code>make valgrind</code>)</li>
+<li><em>code complexity</em> target (<code>make cyclo</code>)</li>
+<li><em>count lines of code</em> target (<code>make stats</code>)</li>
+<li><em>coverage</em> target (<code>make coverage</code>)</li>
+<li><em>linter</em> target (<code>make tidy</code>)</li>
+<li><em>static analysis</em> target (<code>make scan</code>)</li>
+<li>test (<code>make test</code>)</li>
+<li>clean all (doc, build, etc.) (<code>make clean-all</code>)</li>
+</ul>
+</li>
+<li><code>HashNode</code> Class: Questa classe implementa un nodo della tabella, composto da key e value.<ul>
+<li>classe con template</li>
+<li>construttore marcato <code>explicit</code></li>
+<li>costruttore <code>default</code></li>
+<li>passaggio parametri per puntatore e reference</li>
+</ul>
+</li>
+<li><code>HashSet</code> Class: Questa classe implementa un dizionario composto da HashNode generici. Questa classe è astratta, per la presenza di un metodo virtuale puro.<ul>
+<li>classe con template</li>
+<li>metodo <code>pure virtual</code></li>
+<li>implementazione iteratore interno (<code>Iterator</code> Class)</li>
+<li>variabile <code>static</code></li>
+<li>metodi virtuali</li>
+<li>override <code>operator++</code></li>
+<li>override <code>operator*</code></li>
+<li>override <code>operator!=</code></li>
+<li>override <code>operator[]</code></li>
+<li>uso tipo <code>size_t</code> per variabili intere</li>
+<li>inserimento con algoritmi <code>Linear Probing</code> (LP) e <code>Quadratic Probing</code> (QP)</li>
+</ul>
+</li>
+<li><code>HashSetInt</code> Class: Classe derivata da HashSet. Questa classe implementa un dizionario composto da HashNode con key e value interi. E' usata a fine di test.<ul>
+<li>class inheritance</li>
+<li>override e implementazione metodo <code>sprint()</code> per rendere la classe concreta</li>
+<li>utilizzo polimorfismo in late binding</li>
+</ul>
+</li>
+<li><code>HashSetItem</code> Class: Classe derivata da HashSet. Questa classe implementa un dizionario composto da HashNode con key intera e value puntatore a Item. E' usata per la gestione dello Store.<ul>
+<li>class inheritance</li>
+<li>override e implementazione metodo <code>sprint()</code> per rendere la classe concreta</li>
+<li>utilizzo polimorfismo in late binding</li>
+</ul>
+</li>
+<li><code>Item</code> Class: Questa classe implementa un generico prodotto di un magazzino.<ul>
+<li>overloading costruttori</li>
+<li>delegate constructor</li>
+<li>utilizzo lambda</li>
+</ul>
+</li>
+<li><code>ElectronicDevice</code> Class: Classe derivata da Item. Questa classe implementa un Item di tipo ElectronicDevice.<ul>
+<li>override metodo <code>sprint()</code></li>
+</ul>
+</li>
+<li><code>ElectronicDeviceType</code> enum class: Questa enumeration elenca tutti i tipi di ElectronicDevice.<ul>
+<li>utilizzo enum class</li>
+</ul>
+</li>
+<li><code>Food</code> Class: Classe derivata da Item. Questa classe implementa un Item di tipo Food.<ul>
+<li>override metodo <code>sprint()</code></li>
+</ul>
+</li>
+<li><code>FoodType</code> enum class: Questa enumeration elenca tutti i tipi di Food.<ul>
+<li>utilizzo enum class</li>
+</ul>
+</li>
+<li><code>Beverage</code> Class: Classe derivata da Item. Questa classe implementa un Item di tipo Beverage.<ul>
+<li>override metodo <code>sprint()</code></li>
+</ul>
+</li>
+<li><code>BeverageType</code> enum class: Questa enumeration elenca tutti i tipi di Beverage.<ul>
+<li>utilizzo enum class</li>
+</ul>
+</li>
+<li><code>PersonalCareProduct</code> Class: Classe derivata da Item. Questa classe implementa un Item di tipo PersonalCareProduct.<ul>
+<li>override metodo <code>sprint()</code></li>
+</ul>
+</li>
+<li><code>PersonalCareProductType</code> enum class: Questa enumeration elenca tutti i tipi di PersonalCareProduct.<ul>
+<li>utilizzo enum class</li>
+</ul>
+</li>
+<li><code>Store</code> Class: Questa classe implementa un magazzino.<ul>
+<li>passaggio parametri per valore</li>
+<li>range-based for loop</li>
+<li><code>dynamic_cast</code></li>
+</ul>
+</li>
+<li><code>Test</code> file:<ul>
+<li>test funzionalita' di base e polimorfismo</li>
+</ul>
+</li>
+<li><b>Altri note</b>:<ul>
+<li>codice all'interno di <code>namespace</code></li>
+<li>libreria <code>catch2</code> per il testing</li>
+<li>metodi marcati <code>const</code></li>
+<li>Doxygen: parametri in/out, WARNINGS = YES</li>
+<li>distinzione tra variabili private e non (prefisso <code>_</code>)</li>
+<li>nome consistenti tra <code>include</code>, <code>src</code> </li>
+</ul>
+</li>
+</ul>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 7 2020 01:24:54 for SetHashTable by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 8 2020 01:33:05 for SetHashTable by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>

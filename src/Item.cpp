@@ -123,20 +123,20 @@ string Item::sprint()
     return result;
 }
 
-bool Item::isEqual(Item* item)
+bool Item::isEqual(Item& item)
 {
-    if (brand == item->brand && model == item->model)
+    if (brand == item.brand && model == item.model)
     {
         return true;
     }
     return false;
 }
 
-void Item::copy(Item* item)
+void Item::copy(Item& item)
 {
-    brand      = item->brand;
-    model      = item->model;
-    price      = item->price;
-    onDiscount = item->onDiscount;
-    stock      = item->stock;
+    brand      = item.brand;
+    model      = item.model;
+    price      = item.price;
+    onDiscount = item.onDiscount;
+    stock      = item.stock;
 }

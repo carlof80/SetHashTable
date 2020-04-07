@@ -1,13 +1,14 @@
 var searchData=
 [
-  ['hashcode',['hashCode',['../classset_1_1HashSet.html#ad1e20cbb91b3971ff018d2433d26b7ca',1,'set::HashSet']]],
-  ['hashnode',['HashNode',['../classset_1_1HashNode.html',1,'set::HashNode&lt; K, V &gt;'],['../classset_1_1HashNode.html#a43ebcc4c70251d577f0a108c4114cb8e',1,'set::HashNode::HashNode()=default'],['../classset_1_1HashNode.html#a5349b6197536271f80d9b588c756fa23',1,'set::HashNode::HashNode(const K &amp;k, const V &amp;v)'],['../classset_1_1HashNode.html#aabbf9c882ff00849b8e6fb344aec6d3c',1,'set::HashNode::HashNode(HashNode&lt; K, V &gt; *h)']]],
-  ['hashnode_3c_20size_5ft_2c_20item_20_2a_20_3e',['HashNode&lt; size_t, Item * &gt;',['../classset_1_1HashNode.html',1,'set']]],
-  ['hashnode_3c_20size_5ft_2c_20set_3a_3aitem_20_2a_20_3e',['HashNode&lt; size_t, set::Item * &gt;',['../classset_1_1HashNode.html',1,'set']]],
-  ['hashnode_3c_20size_5ft_2c_20size_5ft_20_3e',['HashNode&lt; size_t, size_t &gt;',['../classset_1_1HashNode.html',1,'set']]],
-  ['hashset',['HashSet',['../classset_1_1HashSet.html',1,'set::HashSet&lt; K, V &gt;'],['../classset_1_1HashSet.html#a63536482c2ad96516e35533bbe3ee6ec',1,'set::HashSet::HashSet()=default'],['../classset_1_1HashSet.html#a7fb4e7c1dcd36ceadfcf49cb068e3fd1',1,'set::HashSet::HashSet(size_t c, HashNode&lt; K, V &gt; *initNode)'],['../classset_1_1HashSet.html#aa5dddb18a32142b20d7643ee704bc0d2',1,'set::HashSet::HashSet(const HashSet&lt; K, V &gt; &amp;hashset)']]],
-  ['hashset_3c_20size_5ft_2c_20item_20_2a_20_3e',['HashSet&lt; size_t, Item * &gt;',['../classset_1_1HashSet.html',1,'set']]],
-  ['hashset_3c_20size_5ft_2c_20size_5ft_20_3e',['HashSet&lt; size_t, size_t &gt;',['../classset_1_1HashSet.html',1,'set']]],
-  ['hashsetint',['HashSetInt',['../classset_1_1HashSetInt.html',1,'set']]],
-  ['hashsetitem',['HashSetItem',['../classset_1_1HashSetItem.html',1,'set']]]
+  ['get',['get',['../classset_1_1HashSet.html#a8de66e60433d68d17eb78c3136e25102',1,'set::HashSet']]],
+  ['getaddress',['getAddress',['../classset_1_1Store.html#a9081451a0722bccf4abd1cf7304906a4',1,'set::Store']]],
+  ['getannualrevenue',['getAnnualRevenue',['../classset_1_1Store.html#ab44e713c2855b3f7ec7b57fc113c7bee',1,'set::Store']]],
+  ['getcapacity',['getCapacity',['../classset_1_1HashSetItem.html#aae36a636f97e32984b20cb56d784bde3',1,'set::HashSetItem']]],
+  ['getexpirationdate',['getExpirationDate',['../classset_1_1Food.html#a1753393db530037ef52b338963174528',1,'set::Food']]],
+  ['getitemsnumber',['getItemsNumber',['../classset_1_1Store.html#a0e293da9482d319c656f10d7c2204c0e',1,'set::Store']]],
+  ['getname',['getName',['../classset_1_1Store.html#af3f51f9856617bc6cc796c87f889660b',1,'set::Store']]],
+  ['getprice',['getPrice',['../classset_1_1Item.html#a0234605e088f19c77d826f849c1a0fd0',1,'set::Item']]],
+  ['getproductiondate',['getProductionDate',['../classset_1_1Food.html#a6f93cd5274e6a1109fadb45e0aa411da',1,'set::Food']]],
+  ['getstock',['getStock',['../classset_1_1Item.html#a4a42dc0f2785ae4c7230bfc152976424',1,'set::Item']]],
+  ['gettype',['getType',['../classset_1_1Beverage.html#aed148cd386252d01346d02bff18079d6',1,'set::Beverage::getType()'],['../classset_1_1ElectronicDevice.html#a7f31d5b853018c144336cb349ca414b4',1,'set::ElectronicDevice::getType()'],['../classset_1_1Food.html#aaa506d3f9376a3985b6cfb859f8794c5',1,'set::Food::getType()']]]
 ];

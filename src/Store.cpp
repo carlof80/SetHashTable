@@ -139,7 +139,6 @@ string Store::sprintItemsOf()
     string result_pcp  = "\nPERSONAL CARE PRODUCTS\n\n";
 
     for (auto node : *_collection)
-    //for (size_t i = 0; i < getItemsNumber(); i++)
     {
         Item* item = node.value;
         if (dynamic_cast<ElectronicDevice*>(item) != nullptr)
@@ -178,7 +177,6 @@ string Store::sprintCategoryStock()
     size_t count_pcp  = 0;
 
     for (auto node : *_collection)
-    //for (size_t i = 0; i < getItemsNumber(); i++)
     {
         if (dynamic_cast<ElectronicDevice*>(node.value) != nullptr)
         {
@@ -214,12 +212,12 @@ void Store::addItem(size_t k, Item* item)
 
 Item* Store::removeItem(size_t k)
 {
-    return _collection->removeItem(k);
+    return _collection->removeItemLP(k);
 }
 
 Item* Store::findItem(size_t k)
 {
-    return _collection->findItem(k);
+    return _collection->findItemLP(k);
 }
 
 void Store::updateItem(size_t k,
@@ -229,7 +227,7 @@ void Store::updateItem(size_t k,
                        bool   on_discount,
                        size_t new_stock)
 {
-    Item* item = _collection->findItem(k);
+    Item* item = _collection->findItemLP(k);
     item->brand = b;
     item->model = m;
     item->setPrice(new_price);
@@ -247,7 +245,7 @@ size_t Store::totalStock()
 
     for (size_t i = 0; i < getItemsNumber(); i++)
     {
-        stocked += _collection->findItem(key_values[i])->getStock();
+        stocked += _collection->findItemLP(key_values[i])->getStock();
     }
 
     return stocked;

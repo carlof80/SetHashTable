@@ -42,34 +42,125 @@ using namespace std;
 
 namespace set
 {
+/**
+ *  Class representing an Item, a generic product in a store
+ */
 class Item
 {
 public:
+    /**
+     * @brief Default constructor
+     */
     explicit Item() = default;
-    virtual ~Item();
-    Item(const Item& other);
+
+    /**
+     * @brief Constructor
+     * @details Constructor with all fields
+     * @param[in] b product brand
+     * @param[in] m product model
+     * @param[in] p product price
+     * @param[in] d product on discount flag
+     * @param[in] s product stock number
+     */
     Item(string b, string m, float p, bool d, size_t s);
+
+    /**
+     * @brief Constructor
+     * @details Constructor with brand and model fields
+     * @param[in] b product brand
+     * @param[in] m product model
+     */
     Item(string b, string m);
-    string brand;
-    string model;
 
-    // get-set
+    /**
+     * @brief Constructor
+     * @details Copy constructor
+     * @param[in] other reference to Item to be copied
+     */
+    Item(const Item& other);
+
+    /**
+     * @brief Destructor
+     */
+    virtual ~Item();
+
+    /**
+     * @brief Get price of this
+     * @details Getter method for field price
+     * @return price
+     */
     float getPrice() const;
-    bool  setPrice(float p);
-    bool   isOnDiscount() const;
-    void  setOnDiscount(bool d);
-    size_t getStock() const;
-    void   setStock(size_t s);
 
+    /**
+     * @brief Set price of this
+     * @details Setter method for price field
+     * @param[in] p price
+     * @return true if no error occurs, false otherwise
+     */
+    bool setPrice(float p);
+
+    /**
+     * @brief Get on discount flag of this
+     * @details Getter method for field onDiscount
+     * @return true if item is on discount, false otherwise
+     */
+    bool isOnDiscount() const;
+
+    /**
+     * @brief Set on discount flag of this
+     * @details Setter method for onDiscount field
+     * @param[in] d onDiscount
+     */
+    void setOnDiscount(bool d);
+
+    /**
+     * @brief Get stock number of this
+     * @details Getter method for field stock
+     * @return stock
+     */
+    size_t getStock() const;
+
+    /**
+     * @brief Set stock number of this
+     * @details Setter method for field stock
+     * @param[in] s stock number
+     */
+    void setStock(size_t s);
+
+    /**
+     * @brief Print information on a string
+     * @details A string with information of all fields of the item is built.
+     * @return information string
+     * @remarks This is a virtual method, it needs to be implemented by
+     * derived class(es), in which there could be other fields to be printed
+     */
     virtual string sprint();
 
-    bool         isEqual(Item* item);
-    virtual void copy(Item* item);
+    /**
+     * @brief Check Item equality
+     * @details Check if this and the given item have identical fields values
+     * @param[in] item reference to item to check
+     * @return true if equality, false otherwise
+     */
+    bool isEqual(Item& item);
+
+    /**
+     * @brief Copy Item
+     * @details Item information are copied to this without creating it
+     * @param[in] item  reference to Item to be copied
+     * @return void
+     * @remarks This is a virtual method, it needs to be implemented by
+     * derived class(es), in which there could be other fields to be printed
+     */
+    virtual void copy(Item& item);
+
+    string brand; /*!< Item brand string */
+    string model; /*!< Item brand model */
 
 protected:
-    float price;
-    bool  onDiscount;
-    size_t stock;
+    float  price;      /*!< Item price */
+    bool   onDiscount; /*!< Item on discount flag */
+    size_t stock;      /*!< Item stock number */
 };
 
 } // namespace set

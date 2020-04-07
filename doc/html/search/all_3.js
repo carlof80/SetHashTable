@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['finditem',['findItem',['../classset_1_1HashSet.html#a07d95281ac5420e3d625924faf81341d',1,'set::HashSet']]],
-  ['food',['Food',['../classset_1_1Food.html',1,'set::Food'],['../classset_1_1Food.html#aecfbcee460367ce824d044a275620a53',1,'set::Food::Food()=default'],['../classset_1_1Food.html#ad445968bf07b4d9d305428850539040f',1,'set::Food::Food(string b, string m, float p, bool d, int s, FoodType t)'],['../classset_1_1Food.html#a60b8f236e1bd12f0663f82d98b5d1f28',1,'set::Food::Food(const Food &amp;food)']]]
+  ['electronicdevice',['ElectronicDevice',['../classset_1_1ElectronicDevice.html',1,'set::ElectronicDevice'],['../classset_1_1ElectronicDevice.html#a8eb83e420bac4be5c907d5390d38a4fd',1,'set::ElectronicDevice::ElectronicDevice()=default'],['../classset_1_1ElectronicDevice.html#a72591e304ddd706d27b4a1bba5d9d405',1,'set::ElectronicDevice::ElectronicDevice(string b, string m, float p, bool d, int s, ElectronicDeviceType t)'],['../classset_1_1ElectronicDevice.html#acd442340e76bec15e111bbc2ad85b515',1,'set::ElectronicDevice::ElectronicDevice(const ElectronicDevice &amp;ed)']]],
+  ['electronicdevicetype',['ElectronicDeviceType',['../namespaceset.html#acea7414bb6e35e8ea7b3d9da2c939706',1,'set']]],
+  ['end',['end',['../classset_1_1HashSet.html#a2ddde050223b2c8010768cfbaa7f3c58',1,'set::HashSet']]]
 ];

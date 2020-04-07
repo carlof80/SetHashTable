@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['electronicdevice',['ElectronicDevice',['../classset_1_1ElectronicDevice.html',1,'set::ElectronicDevice'],['../classset_1_1ElectronicDevice.html#a8eb83e420bac4be5c907d5390d38a4fd',1,'set::ElectronicDevice::ElectronicDevice()=default'],['../classset_1_1ElectronicDevice.html#a72591e304ddd706d27b4a1bba5d9d405',1,'set::ElectronicDevice::ElectronicDevice(string b, string m, float p, bool d, int s, ElectronicDeviceType t)'],['../classset_1_1ElectronicDevice.html#acd442340e76bec15e111bbc2ad85b515',1,'set::ElectronicDevice::ElectronicDevice(const ElectronicDevice &amp;ed)']]],
-  ['electronicdevicetype',['ElectronicDeviceType',['../namespaceset.html#acea7414bb6e35e8ea7b3d9da2c939706',1,'set']]],
-  ['end',['end',['../classset_1_1HashSet.html#a2ddde050223b2c8010768cfbaa7f3c58',1,'set::HashSet']]]
+  ['copy',['copy',['../classset_1_1Beverage.html#af094c8271d53aefa38b33a191ed29c24',1,'set::Beverage::copy()'],['../classset_1_1ElectronicDevice.html#aa35b46a7018dc6eba10273814ec77c73',1,'set::ElectronicDevice::copy()'],['../classset_1_1Food.html#ac76f466e788e40092c91903c47a39a69',1,'set::Food::copy()'],['../classset_1_1HashNode.html#ae637b9596ee62c4930f9cacdf81b054c',1,'set::HashNode::copy()'],['../classset_1_1Item.html#a0604ecd79804c1a686ddf9d9a945588b',1,'set::Item::copy()'],['../classset_1_1PersonalCareProduct.html#abb20475af349a2e727a0886a02a8074d',1,'set::PersonalCareProduct::copy()']]],
+  ['cosa_20include_20il_20progetto',['Cosa include il progetto',['../index.html',1,'']]]
 ];

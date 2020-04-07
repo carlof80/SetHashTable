@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['removeitem',['removeItem',['../classset_1_1HashSet.html#a153652e57edac639cbfb6bb7b1112152',1,'set::HashSet']]]
+  ['personalcareproduct',['PersonalCareProduct',['../classset_1_1PersonalCareProduct.html#a42be57b1a7b463e20c52973d6bc12880',1,'set::PersonalCareProduct']]]
 ];

@@ -66,9 +66,9 @@ string Beverage::sprint()
     return result;
 }
 
-void Beverage::copy(Item* item)
+void Beverage::copy(Item& item)
 {
     Item::copy(item);
-    // Beverage* i = dynamic_cast<Beverage*>(item);
+    // Beverage* i = dynamic_cast<Beverage&>(item);
     // type = i->type;
 }

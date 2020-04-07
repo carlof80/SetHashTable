@@ -58,7 +58,7 @@ public:
     ~PersonalCareProduct();
     PersonalCareProductType getType() const;
     string                  sprint() override;
-    void                    copy(Item* item);
+    void                    copy(Item& item);
 
 private:
     PersonalCareProductType _type;

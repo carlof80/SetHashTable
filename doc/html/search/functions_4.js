@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['get',['get',['../classset_1_1HashSet.html#a8de66e60433d68d17eb78c3136e25102',1,'set::HashSet']]],
-  ['getexpirationdate',['getExpirationDate',['../classset_1_1Food.html#a1753393db530037ef52b338963174528',1,'set::Food']]],
-  ['getproductiondate',['getProductionDate',['../classset_1_1Food.html#a6f93cd5274e6a1109fadb45e0aa411da',1,'set::Food']]],
-  ['gettype',['getType',['../classset_1_1Beverage.html#aed148cd386252d01346d02bff18079d6',1,'set::Beverage::getType()'],['../classset_1_1ElectronicDevice.html#a7f31d5b853018c144336cb349ca414b4',1,'set::ElectronicDevice::getType()'],['../classset_1_1Food.html#aaa506d3f9376a3985b6cfb859f8794c5',1,'set::Food::getType()']]]
+  ['finditem',['findItem',['../classset_1_1Store.html#a3683a30e474a33f674f3c4d959f96c94',1,'set::Store']]],
+  ['finditemlp',['findItemLP',['../classset_1_1HashSet.html#a2bc6c3b28353f649727beffc97d79ce7',1,'set::HashSet']]],
+  ['finditemqp',['findItemQP',['../classset_1_1HashSet.html#afe7b351d0fb39748a84448c2c955886e',1,'set::HashSet']]],
+  ['food',['Food',['../classset_1_1Food.html#aecfbcee460367ce824d044a275620a53',1,'set::Food::Food()=default'],['../classset_1_1Food.html#ad445968bf07b4d9d305428850539040f',1,'set::Food::Food(string b, string m, float p, bool d, int s, FoodType t)'],['../classset_1_1Food.html#a60b8f236e1bd12f0663f82d98b5d1f28',1,'set::Food::Food(const Food &amp;food)']]]
 ];

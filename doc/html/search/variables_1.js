@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['value',['value',['../classset_1_1HashNode.html#a23f7f30ab9e895aea2052218d6f93835',1,'set::HashNode']]]
+  ['key',['key',['../classset_1_1HashNode.html#aeef39ea3c57e1a8aabf2d175ba3565c7',1,'set::HashNode']]]
 ];

@@ -43,21 +43,66 @@ using namespace std;
 
 namespace set
 {
+/**
+ *  Class representing HashSet with key and value of type int
+ */
 class HashSetInt : public HashSet<size_t, size_t>
 {
 public:
+    /**
+     * @brief Default constructor
+     */
+    explicit HashSetInt() = default;
+
+    /**
+     * @brief Constructor
+     * @details Constructor with capacity field
+     * @param[in] c capacity
+     */
     HashSetInt(size_t c);
+
+    /**
+     * @brief Constructor
+     * @details Copy constructor
+     * @param[in] hashSetInt reference to HashSetInt to be copied
+     */
     HashSetInt(const HashSetInt& hashSetInt);
+
+    /**
+     * @brief Destructor
+     */
     ~HashSetInt();
 
-    /* Stampa su stringa la lista nell'ordine specificato */
-    /* Override parent method */
+    /**
+     * @brief Print information on a string
+     * @details A string with information of all items of the set is built.
+     * @return information string
+     * @remarks override parent method
+     */
     string sprint() override;
-    bool   isAvailable(size_t i);
-    void   setAvailable(size_t i);
+
+    /**
+     * @brief Checking location availability
+     * @details The function checks if position specified is available for
+     * inserting new items.
+     * @param[in] i position of the set to be checked
+     * @return true if available, false otherwise
+     * @remarks override parent method
+     */
+    bool isAvailable(size_t i) override;
+
+    /**
+     * @brief Setting location availability
+     * @details The function makes position specified available for
+     * inserting new items.
+     * @param[in] i position of the set to be checked
+     * @remarks override parent method
+     */
+    void setAvailable(size_t i) override;
 
 private:
-    static HashNode<size_t, size_t>* AVAIL;
+    static HashNode<size_t, size_t>*
+        AVAIL; /*!< Sentinel for node availability (class variable) */
 };
 
 HashNode<size_t, size_t>* HashSetInt::AVAIL =

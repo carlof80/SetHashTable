@@ -74,9 +74,9 @@ string ElectronicDevice::sprint()
     return result;
 }
 
-void ElectronicDevice::copy(Item* item)
+void ElectronicDevice::copy(Item& item)
 {
     Item::copy(item);
-    // ElectronicDevice* i = dynamic_cast<ElectronicDevice*>(item);
+    // ElectronicDevice* i = dynamic_cast<ElectronicDevice&>(item);
     // type = i->type;
 }

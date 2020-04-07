@@ -98,11 +98,11 @@ public:
     /**
      * @brief Copy Item
      * @details Item information are copied to this without creating it
-     * @param[in] item  pointer to Item to be copied
+     * @param[in] item  reference to Item to be copied
      * @return void
      * @see Item.hpp
      */
-    void copy(Item* item);
+    void copy(Item& item);
 
 private:
     BeverageType _type; /*!< Beverage type among BeverageType elements */
