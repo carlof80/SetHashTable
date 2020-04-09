@@ -38,23 +38,57 @@
 
 using namespace set;
 
+/**
+ * @brief Constructor
+ * @details Constructor with capacity field
+ * @param[in] c capacity
+ */
 HashSetInt::HashSetInt(size_t c) : HashSet(c, AVAIL) {}
 
+/**
+ * @brief Constructor
+ * @details Copy constructor
+ * @param[in] hashSetInt reference to HashSetInt to be copied
+ */
 HashSetInt::HashSetInt(const HashSetInt& hashSetInt) : HashSet(hashSetInt) {}
 
+/**
+ * @brief Destructor
+ */
 HashSetInt::~HashSetInt() {}
 
+/**
+ * @brief Checking location availability
+ * @details The function checks if position specified is available for
+ * inserting new items.
+ * @param[in] i position of the set to be checked
+ * @return true if available, false otherwise
+ * @remarks override parent method
+ */
 bool HashSetInt::isAvailable(size_t i)
 {
     return get(i)->isEqual(AVAIL);
 }
 
+/**
+ * @brief Setting location availability
+ * @details The function makes position specified available for
+ * inserting new items.
+ * @param[in] i position of the set to be checked
+ * @remarks override parent method
+ */
 void HashSetInt::setAvailable(size_t i)
 {
     get(i)->key   = AVAIL->key;
     get(i)->value = AVAIL->value;
 }
 
+/**
+ * @brief Print information on a string
+ * @details A string with information of all items of the set is built.
+ * @return information string
+ * @remarks override parent method
+ */
 string HashSetInt::sprint()
 {
     string result = "ITEMS\n\n";

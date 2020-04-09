@@ -1,4 +1,3 @@
-#include "..\include\Beverage.hpp"
 /**
  * @copyright Copyright © 2020 SetHashTable. All rights reserved.
  *
@@ -39,24 +38,56 @@
 
 using namespace set;
 
+/**
+ * @brief Constructor
+ * @details Constructor with all fields
+ * @param[in] b Item brand
+ * @param[in] m Item model
+ * @param[in] p Item price
+ * @param[in] d Item onDiscount flag
+ * @param[in] s Item stock amount
+ * @param[in] t Item type
+ * @see Item.hpp
+ */
 Beverage::Beverage(string b, string m, float p, bool d, int s, BeverageType t) :
     Item(b, m, p, d, s)
 {
     _type = t;
 }
 
+/**
+ * @brief Constructor
+ * @details Copy constructor
+ * @param[in] beverage reference to Beverage to be copied
+ * @see Item.hpp
+ */
 Beverage::Beverage(const Beverage& beverage) : Item(beverage)
 {
     _type = beverage._type;
 }
 
+/**
+ * @brief Destructor
+ */
 Beverage::~Beverage() {}
 
+/**
+ * @brief Get type of this
+ * @details Getter method for field _type
+ * @return _type
+ */
 BeverageType Beverage::getType() const
 {
     return _type;
 }
 
+/**
+ * @brief Print on string Beverage information
+ * @details Information printed are the same of Item ones, plus type
+ * @return Result string
+ * @remarks Override Item function
+ * @see Item.hpp
+ */
 string Beverage::sprint()
 {
     const string TYPES[] = { "Water", "Wine",   "Beer",
@@ -66,6 +97,13 @@ string Beverage::sprint()
     return result;
 }
 
+/**
+ * @brief Copy Item
+ * @details Item information are copied to this without creating it
+ * @param[in] item  reference to Item to be copied
+ * @return void
+ * @see Item.hpp
+ */
 void Beverage::copy(Item& item)
 {
     Item::copy(item);

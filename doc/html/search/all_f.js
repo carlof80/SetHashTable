@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['updateitem',['updateItem',['../classset_1_1Store.html#a5f97369e1199dbafde2410d02f29600e',1,'set::Store']]]
+  ['totalstock',['totalStock',['../classset_1_1Store.html#a6a8d42b4caffc41ea7a6f7ef2835c233',1,'set::Store']]]
 ];

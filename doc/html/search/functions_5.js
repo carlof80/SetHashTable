@@ -10,5 +10,5 @@ var searchData=
   ['getprice',['getPrice',['../classset_1_1Item.html#a0234605e088f19c77d826f849c1a0fd0',1,'set::Item']]],
   ['getproductiondate',['getProductionDate',['../classset_1_1Food.html#a6f93cd5274e6a1109fadb45e0aa411da',1,'set::Food']]],
   ['getstock',['getStock',['../classset_1_1Item.html#a4a42dc0f2785ae4c7230bfc152976424',1,'set::Item']]],
-  ['gettype',['getType',['../classset_1_1Beverage.html#aed148cd386252d01346d02bff18079d6',1,'set::Beverage::getType()'],['../classset_1_1ElectronicDevice.html#a7f31d5b853018c144336cb349ca414b4',1,'set::ElectronicDevice::getType()'],['../classset_1_1Food.html#aaa506d3f9376a3985b6cfb859f8794c5',1,'set::Food::getType()']]]
+  ['gettype',['getType',['../classset_1_1Beverage.html#aed148cd386252d01346d02bff18079d6',1,'set::Beverage::getType()'],['../classset_1_1ElectronicDevice.html#a7f31d5b853018c144336cb349ca414b4',1,'set::ElectronicDevice::getType()'],['../classset_1_1Food.html#aaa506d3f9376a3985b6cfb859f8794c5',1,'set::Food::getType()'],['../classset_1_1PersonalCareProduct.html#acc2d856031e7a9a60813468da4c1dcef',1,'set::PersonalCareProduct::getType()']]]
 ];

@@ -39,6 +39,17 @@
 
 using namespace set;
 
+/**
+ * @brief Constructor
+ * @details Constructor with all fields
+ * @param[in] b Item brand
+ * @param[in] m Item model
+ * @param[in] p Item price
+ * @param[in] d Item onDiscount flag
+ * @param[in] s Item stock amount
+ * @param[in] t Item type
+ * @see Item.hpp
+ */
 ElectronicDevice::ElectronicDevice(string               b,
                                    string               m,
                                    float                p,
@@ -50,18 +61,39 @@ ElectronicDevice::ElectronicDevice(string               b,
     _type = t;
 }
 
+/**
+ * @brief Constructor
+ * @details Copy constructor
+ * @param[in] ed device reference to ElectronicDevice to be copied
+ * @see Item.hpp
+ */
 ElectronicDevice::ElectronicDevice(const ElectronicDevice& ed) : Item(ed)
 {
     _type = ed._type;
 }
 
+/**
+ * @brief Destructor
+ */
 ElectronicDevice::~ElectronicDevice() {}
 
+/**
+ * @brief Get type of this
+ * @details Getter method for field _type
+ * @return _type
+ */
 ElectronicDeviceType ElectronicDevice::getType() const
 {
     return _type;
 }
 
+/**
+ * @brief Print on string ElectronicDevice information
+ * @details Information printed are the same of Item ones, plus type
+ * @return Result string
+ * @remarks Override Item function
+ * @see Item.hpp
+ */
 string ElectronicDevice::sprint()
 {
     const string TYPES[] = {
@@ -74,6 +106,13 @@ string ElectronicDevice::sprint()
     return result;
 }
 
+/**
+ * @brief Copy Item
+ * @details Item information are copied to this without creating it
+ * @param[in] item  reference to Item to be copied
+ * @return void
+ * @see Item.hpp
+ */
 void ElectronicDevice::copy(Item& item)
 {
     Item::copy(item);

@@ -39,42 +39,54 @@
 
 using namespace set;
 
-/*template<typename K, typename V>
-HashNode<K,V>::HashNode()
-{
-	key = NULL;
-	value = NULL;
-}*/
-
+/**
+ * @brief Constructor
+ * @details Constructor with all fields
+ * @param[in] k constant reference to key
+ * @param[in] v constant reference to value
+ */
 template<typename K, typename V>
 HashNode<K, V>::HashNode(const K& k, const V& v)
 {
-	key = k;
-	value = v;
+    key   = k;
+    value = v;
 }
 
-template<typename K, typename V>
-HashNode<K, V>::HashNode(HashNode<K, V>* h)
+/**
+ * @brief Constructor
+ * @details Copy constructor
+ * @param[in] h pointer to HashNode to be copied
+ */
+template<typename K, typename V> HashNode<K, V>::HashNode(HashNode<K, V>* h)
 {
-	key = h->key;
-	value = h->value;
+    key   = h->key;
+    value = h->value;
 }
 
-template<typename K, typename V>
-HashNode<K, V>::~HashNode()
-{
+/**
+ * @brief Destructor
+ */
+template<typename K, typename V> HashNode<K, V>::~HashNode() {}
 
-}
-
+/**
+ * @brief Equality check
+ * @details Check if this is equal to a specified node
+ * @param[in] node pointer to HashNode to be checked
+ * @return true if equal, false otherwise
+ */
 template<typename K, typename V>
 bool HashNode<K, V>::isEqual(HashNode<K, V>* node)
 {
-	return (key == node->key && value == node->value);
+    return (key == node->key && value == node->value);
 }
 
-template<typename K, typename V>
-void HashNode<K, V>::copy(HashNode<K, V>* node)
+/**
+ * @brief Copy fields
+ * @details Copy fields of specified node to this without create it
+ * @param[in] node pointer to HashNode to be copied
+ */
+template<typename K, typename V> void HashNode<K, V>::copy(HashNode<K, V>* node)
 {
-	key = node->key;
-	value = node->value;
+    key   = node->key;
+    value = node->value;
 }

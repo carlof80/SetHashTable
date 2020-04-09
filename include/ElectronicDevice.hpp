@@ -46,7 +46,6 @@ namespace set
 class ElectronicDevice : public Item
 {
 public:
-
     /**
      * @brief Default constructor
      */

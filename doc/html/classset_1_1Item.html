@@ -30,7 +30,7 @@
    <div id="projectname">SetHashTable
    &#160;<span id="projectnumber">v1.0</span>
    </div>
-   <div id="projectbrief">Storemanagementwithset</div>
+   <div id="projectbrief">Store_management_with_set</div>
   </td>
  </tr>
  </tbody>
@@ -203,7 +203,14 @@ Data Fields</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>product model </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>product price </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">d</td><td>product on discount flag </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td>product stock number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td>product stock number</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Constructor with brand and model fields </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>product brand </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>product model </td></tr>
   </table>
   </dd>
 </dl>
@@ -240,7 +247,13 @@ Data Fields</h2></td></tr>
 <p>Constructor with brand and model fields </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>product brand </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>product model </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>product model</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Copy constructor </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>reference to <a class="el" href="classset_1_1Item.html">Item</a> to be copied </td></tr>
   </table>
   </dd>
 </dl>
@@ -266,7 +279,17 @@ Data Fields</h2></td></tr>
 <p>Constructor. </p>
 <p>Copy constructor </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>reference to <a class="el" href="classset_1_1Item.html">Item</a> to be copied </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>reference to <a class="el" href="classset_1_1Item.html">Item</a> to be copied</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Constructor with all fields </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>product brand </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>product model </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>product price </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">d</td><td>product on discount flag </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td>product stock number </td></tr>
   </table>
   </dd>
 </dl>
@@ -308,7 +331,7 @@ Data Fields</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 <dl class="section remark"><dt>Remarks</dt><dd>This is a virtual method, it needs to be implemented by derived class(es), in which there could be other fields to be printed </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classset_1_1Food.html#ac76f466e788e40092c91903c47a39a69">set::Food</a>, <a class="el" href="classset_1_1ElectronicDevice.html#aa35b46a7018dc6eba10273814ec77c73">set::ElectronicDevice</a>, <a class="el" href="classset_1_1Beverage.html#af094c8271d53aefa38b33a191ed29c24">set::Beverage</a>, and <a class="el" href="classset_1_1PersonalCareProduct.html#abb20475af349a2e727a0886a02a8074d">set::PersonalCareProduct</a>.</p>
+<p>Reimplemented in <a class="el" href="classset_1_1Food.html#ac76f466e788e40092c91903c47a39a69">set::Food</a>, <a class="el" href="classset_1_1ElectronicDevice.html#aa35b46a7018dc6eba10273814ec77c73">set::ElectronicDevice</a>, <a class="el" href="classset_1_1PersonalCareProduct.html#abb20475af349a2e727a0886a02a8074d">set::PersonalCareProduct</a>, and <a class="el" href="classset_1_1Beverage.html#af094c8271d53aefa38b33a191ed29c24">set::Beverage</a>.</p>
 
 </div>
 </div>
@@ -505,7 +528,7 @@ Data Fields</h2></td></tr>
 <p>A string with information of all fields of the item is built. </p><dl class="section return"><dt>Returns</dt><dd>information string </dd></dl>
 <dl class="section remark"><dt>Remarks</dt><dd>This is a virtual method, it needs to be implemented by derived class(es), in which there could be other fields to be printed </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classset_1_1Food.html#a1bf268df1ddc8748285c4388a90f6e8a">set::Food</a>, <a class="el" href="classset_1_1ElectronicDevice.html#a75ab68b76595f93b468dc3d69c44b0c9">set::ElectronicDevice</a>, <a class="el" href="classset_1_1Beverage.html#a80fca014809eacf871dfbd5f996a6458">set::Beverage</a>, and <a class="el" href="classset_1_1PersonalCareProduct.html#a95e474c47506ad5095e4636d9ec3114f">set::PersonalCareProduct</a>.</p>
+<p>Reimplemented in <a class="el" href="classset_1_1Food.html#a1bf268df1ddc8748285c4388a90f6e8a">set::Food</a>, <a class="el" href="classset_1_1ElectronicDevice.html#a75ab68b76595f93b468dc3d69c44b0c9">set::ElectronicDevice</a>, <a class="el" href="classset_1_1PersonalCareProduct.html#a95e474c47506ad5095e4636d9ec3114f">set::PersonalCareProduct</a>, and <a class="el" href="classset_1_1Beverage.html#a80fca014809eacf871dfbd5f996a6458">set::Beverage</a>.</p>
 
 </div>
 </div>
@@ -541,13 +564,13 @@ Data Fields</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/<a class="el" href="Item_8hpp_source.html">Item.hpp</a></li>
-<li>src/Item.cpp</li>
+<li>C:/Users/famari_carlo/source/repos/SetHashTable/include/<a class="el" href="Item_8hpp_source.html">Item.hpp</a></li>
+<li>C:/Users/famari_carlo/source/repos/SetHashTable/src/Item.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 8 2020 01:33:05 for SetHashTable by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Apr 9 2020 23:23:12 for SetHashTable by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>

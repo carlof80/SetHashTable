@@ -21,7 +21,7 @@
 
 * `HashSet` Class:
     Questa classe implementa un dizionario composto da HashNode generici.
-    Questa classe è astratta, per la presenza di un metodo virtuale puro.
+    Questa classe e' astratta, per la presenza di un metodo virtuale puro.
     - classe con template
     - metodo `pure virtual`
     - implementazione iteratore interno (`Iterator` Class)
@@ -32,7 +32,7 @@
     - override `operator!=`
     - override `operator[]`
     - uso tipo `size_t` per variabili intere
-    - inserimento con algoritmi `Linear Probing` (LP) e `Quadratic Probing` (QP)
+    - uso algoritmi `Linear Probing` (LP) e `Quadratic Probing` (QP)
 
 * `HashSetInt` Class:
     Classe derivata da HashSet.

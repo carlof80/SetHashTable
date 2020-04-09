@@ -48,20 +48,65 @@ public:
      */
     explicit PersonalCareProduct() = default;
 
+    /**
+     * @brief Constructor
+     * @details Constructor with all fields
+     * @param[in] b Item brand
+     * @param[in] m Item model
+     * @param[in] p Item price
+     * @param[in] d Item onDiscount flag
+     * @param[in] s Item stock amount
+     * @param[in] t Item type
+     * @see Item.hpp
+     */
     PersonalCareProduct(string                  b,
                         string                  m,
                         float                   p,
                         bool                    d,
                         int                     s,
                         PersonalCareProductType t);
+
+    /**
+     * @brief Constructor
+     * @details Copy constructor
+     * @param[in] pcp device reference to PersonalCareProduct to be copied
+     * @see Item.hpp
+     */
     PersonalCareProduct(const PersonalCareProduct& pcp);
+
+    /**
+     * @brief Destructor
+     */
     ~PersonalCareProduct();
+
+    /**
+     * @brief Get type of this
+     * @details Getter method for field _type
+     * @return _type
+     */
     PersonalCareProductType getType() const;
-    string                  sprint() override;
-    void                    copy(Item& item);
+
+    /**
+     * @brief Print on string PersonalCareProduct information
+     * @details Information printed are the same of Item ones, plus type
+     * @return Result string
+     * @remarks Override Item function
+     * @see Item.hpp
+     */
+    string sprint() override;
+
+    /**
+     * @brief Copy Item
+     * @details Item information are copied to this without creating it
+     * @param[in] item  reference to Item to be copied
+     * @return void
+     * @see Item.hpp
+     */
+    void copy(Item& item);
 
 private:
-    PersonalCareProductType _type;
+    PersonalCareProductType _type; /*!< PersonalCareProduct type among
+                                      PersonalCareProductType elements */
 };
 
 } // namespace set

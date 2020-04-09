@@ -1,1 +1,8 @@
+CompileTest 0 0
+SetTest1 0 0
+SetTest2 0 0
+SetTest3 0 0
+SetTest4 0 0
+SetTest5 0 0
+SetTest6 0 0
 ---

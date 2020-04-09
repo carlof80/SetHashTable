@@ -47,7 +47,6 @@ namespace set
 class Beverage : public Item
 {
 public:
-
     /**
      * @brief Default constructor
      */

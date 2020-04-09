@@ -36,7 +36,18 @@
 
 #pragma once
 
-namespace set 
+namespace set
 {
-	enum class FoodType { MEAT = 0, FISH, VEGETABLES, FRUIT, SWEETS, BREAD };
-}
+/**
+ * Enum class containing all types of food
+ */
+enum class FoodType
+{
+    MEAT = 0,
+    FISH,
+    VEGETABLES,
+    FRUIT,
+    SWEETS,
+    BREAD
+};
+} // namespace set

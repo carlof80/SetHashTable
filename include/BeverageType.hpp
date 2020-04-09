@@ -39,7 +39,7 @@
 namespace set
 {
 
- /**
+/**
  * Enum class containing all types of beverages
  */
 enum class BeverageType
@@ -51,4 +51,4 @@ enum class BeverageType
     SPIRIT,
     SOFT_DRINK
 };
-}
+} // namespace set

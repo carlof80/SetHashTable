@@ -198,8 +198,8 @@ public:
 
     /**
      * @brief Item searching
-     * @details First item with the specified key is searched, according to Linear
-     * Probing algorithm
+     * @details First item with the specified key is searched, according to
+     * Linear Probing algorithm
      * @param[in] k reference to key
      * @return value of searched item
      */
@@ -207,8 +207,8 @@ public:
 
     /**
      * @brief Item searching
-     * @details First item with the specified key is searched, according to Quadratic
-     * Probing algorithm
+     * @details First item with the specified key is searched, according to
+     * Quadratic Probing algorithm
      * @param[in] k reference to key
      * @return value of searched item
      */

@@ -38,29 +38,68 @@
 
 using namespace set;
 
+/**
+ * @brief Constructor
+ * @details Constructor with capacity fields
+ * @param[in] c capacity
+ */
 HashSetItem::HashSetItem(size_t c) : HashSet(c, AVAIL) {}
 
+/**
+ * @brief Constructor
+ * @details Copy constructor
+ * @param[in] hashSetItem reference to HashSetItem to be copied
+ */
 HashSetItem::HashSetItem(const HashSetItem& hashSetItem) : HashSet(hashSetItem)
 {}
 
+/**
+ * @brief Destructor
+ */
 HashSetItem::~HashSetItem() {}
 
+/**
+ * @brief Checking location availability
+ * @details The function checks if position specified is available for
+ * inserting new items.
+ * @param[in] i position of the set to be checked
+ * @return true if available, false otherwise
+ * @remarks override parent method
+ */
 bool HashSetItem::isAvailable(size_t i)
 {
     return get(i)->isEqual(AVAIL);
 }
 
+/**
+ * @brief Setting location availability
+ * @details The function makes position specified available for
+ * inserting new items.
+ * @param[in] i position of the set to be checked
+ * @remarks override parent method
+ */
 void HashSetItem::setAvailable(size_t i)
 {
     get(i)->key   = AVAIL->key;
     get(i)->value = AVAIL->value;
 }
 
+/**
+ * @brief Getting set capacity
+ * @details Maximum number of items in the set is returned
+ * @return set capacity
+ */
 size_t HashSetItem::getCapacity() const
 {
     return capacity;
 }
 
+/**
+ * @brief Print information on a string
+ * @details A string with information of all items of the set is built.
+ * @return information string
+ * @remarks override parent method
+ */
 string HashSetItem::sprint()
 {
     string result = "ITEMS\n\n";

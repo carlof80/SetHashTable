@@ -112,6 +112,13 @@ public:
     void setExpirationDate(string date);
 
     /**
+     * @brief Item expiration
+     * @details Check if item is expired
+     * @return true if is expired, false otherwise
+     */
+    bool isExpired();
+
+    /**
      * @brief Print on string Food information
      * @details Information printed are the same of Item ones, plus type
      * @return Result string
@@ -119,13 +126,6 @@ public:
      * @see Item.hpp
      */
     string sprint() override;
-
-    /**
-     * @brief Item expiration
-     * @details Check if item is expired
-     * @return true if is expired, false otherwise
-     */
-    bool isExpired();
 
     /**
      * @brief Copy Item

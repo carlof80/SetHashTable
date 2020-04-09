@@ -1,0 +1,8 @@
+C:/Users/famari_carlo/source/repos/SetHashTable/build/CMakeFiles/RUN_TESTS.dir
+C:/Users/famari_carlo/source/repos/SetHashTable/build/CMakeFiles/clean-all.dir
+C:/Users/famari_carlo/source/repos/SetHashTable/build/CMakeFiles/doc.dir
+C:/Users/famari_carlo/source/repos/SetHashTable/build/CMakeFiles/clangformat.dir
+C:/Users/famari_carlo/source/repos/SetHashTable/build/CMakeFiles/hashset.dir
+C:/Users/famari_carlo/source/repos/SetHashTable/build/CMakeFiles/SetHashTable_test.dir
+C:/Users/famari_carlo/source/repos/SetHashTable/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/famari_carlo/source/repos/SetHashTable/build/CMakeFiles/ZERO_CHECK.dir

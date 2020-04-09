@@ -38,6 +38,9 @@
 
 namespace set
 {
+/**
+ * Enum class containing all types of personal care products
+ */
 enum class PersonalCareProductType
 {
     SHAMPOO = 0,
@@ -47,4 +50,4 @@ enum class PersonalCareProductType
     TOWEL,
     COMB
 };
-}
+} // namespace set

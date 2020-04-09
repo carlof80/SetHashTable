@@ -60,6 +60,10 @@
 
 using namespace set;
 
+/**
+ * @brief Hash table set test
+ * @details Insertion, removal and finding af a item is tested.
+ */
 TEST_CASE("Set Test", "[SetTest]")
 {
     using K               = size_t;
@@ -97,6 +101,10 @@ TEST_CASE("Set Test", "[SetTest]")
     delete h2;
 }
 
+/**
+ * @brief Store test
+ * @details Store management is tested.
+ */
 TEST_CASE("Set Store management", "[StoreTest]")
 {
     const size_t    CAPACITY       = 1023;
@@ -158,6 +166,10 @@ TEST_CASE("Set Store management", "[StoreTest]")
     delete store2;
 }
 
+/**
+ * @brief Polymorphism test
+ * @details Polymorphism of Item and its derived classes is tested.
+ */
 TEST_CASE("Polymorphism Test", "PolymorphismTest]")
 {
     std::cout
@@ -173,6 +185,10 @@ TEST_CASE("Polymorphism Test", "PolymorphismTest]")
     delete item1;
 }
 
+/**
+ * @brief Iterator test
+ * @details Hash table set iterator is tested.
+ */
 TEST_CASE("Iterator Test", "IteratorTest]")
 {
     const int CAPACITY = 5;
@@ -197,6 +213,10 @@ TEST_CASE("Iterator Test", "IteratorTest]")
     delete store;
 }
 
+/**
+ * @brief Probing test
+ * @details Performance between Linear Probing and Quadratic Probing is tested.
+ */
 TEST_CASE("Probing Set Test", "[ProbingSetTest]")
 {
     using K               = size_t;
@@ -245,6 +265,10 @@ TEST_CASE("Probing Set Test", "[ProbingSetTest]")
     delete h2;
 }
 
+/**
+ * @brief Time test
+ * @details Time management is tested.
+ */
 TEST_CASE("Time Test", "TimeTest]")
 {
     std::cout

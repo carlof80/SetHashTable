@@ -1,4 +1,3 @@
-#include "..\include\Food.hpp"
 /**
  * @copyright Copyright © 2020 SetHashTable. All rights reserved.
  *
@@ -40,6 +39,17 @@
 
 using namespace set;
 
+/**
+ * @brief Constructor
+ * @details Constructor with all fields
+ * @param[in] b Item brand
+ * @param[in] m Item model
+ * @param[in] p Item price
+ * @param[in] d Item onDiscount flag
+ * @param[in] s Item stock amount
+ * @param[in] t Item type
+ * @see Item.hpp
+ */
 Food::Food(string b, string m, float p, bool d, int s, FoodType t) :
     Item(b, m, p, d, s)
 {
@@ -48,6 +58,12 @@ Food::Food(string b, string m, float p, bool d, int s, FoodType t) :
     _expiration_date = "N.A."; // Not Available
 }
 
+/**
+ * @brief Constructor
+ * @details Copy constructor
+ * @param[in] food reference to Food to be copied
+ * @see Item.hpp
+ */
 Food::Food(const Food& food) : Item(food)
 {
     _type            = food._type;
@@ -55,33 +71,66 @@ Food::Food(const Food& food) : Item(food)
     _expiration_date = food._expiration_date;
 }
 
+/**
+ * @brief Destructor
+ */
 Food::~Food() {}
 
+/**
+ * @brief Get type of this
+ * @details Getter method for field _type
+ * @return _type
+ */
 FoodType Food::getType() const
 {
     return _type;
 }
 
+/**
+ * @brief Get production date of this
+ * @details Getter method for field _production_date
+ * @return _production_date
+ */
 string Food::getProductionDate() const
 {
     return _production_date;
 }
 
+/**
+ * @brief Set production date of this
+ * @details Setter method for field _production_date
+ * @param[in] date struct of production date
+ */
 void Food::setProductionDate(string date)
 {
     _production_date = date;
 }
 
+/**
+ * @brief Get expiration date of this
+ * @details Getter method for field _expiration_date
+ * @return _expiration_date
+ */
 string Food::getExpirationDate() const
 {
     return _expiration_date;
 }
 
+/**
+ * @brief Set expiration date of this
+ * @details Setter method for field _expiration_date
+ * @param[in] date struct of expiration date
+ */
 void Food::setExpirationDate(string date)
 {
     _expiration_date = date;
 }
 
+/**
+ * @brief Item expiration
+ * @details Check if item is expired
+ * @return true if is expired, false otherwise
+ */
 bool Food::isExpired()
 {
     std::time_t t           = std::time(0); // get time now
@@ -127,6 +176,13 @@ bool Food::isExpired()
     return true;
 }
 
+/**
+ * @brief Print on string Food information
+ * @details Information printed are the same of Item ones, plus type
+ * @return Result string
+ * @remarks Override Item function
+ * @see Item.hpp
+ */
 string Food::sprint()
 {
     const string TYPES[] = { "Meat",  "Fish",   "Vegetables",
@@ -138,6 +194,13 @@ string Food::sprint()
     return result;
 }
 
+/**
+ * @brief Copy Item
+ * @details Item information are copied to this without creating it
+ * @param[in] item  reference to Item to be copied
+ * @return void
+ * @see Item.hpp
+ */
 void Food::copy(Item& item)
 {
     Item::copy(item);

@@ -76,14 +76,6 @@ public:
     ~HashSetItem();
 
     /**
-     * @brief Print information on a string
-     * @details A string with information of all items of the set is built.
-     * @return information string
-     * @remarks override parent method
-     */
-    string sprint() override;
-
-    /**
      * @brief Checking location availability
      * @details The function checks if position specified is available for
      * inserting new items.
@@ -108,6 +100,14 @@ public:
      * @return set capacity
      */
     size_t getCapacity() const;
+
+    /**
+     * @brief Print information on a string
+     * @details A string with information of all items of the set is built.
+     * @return information string
+     * @remarks override parent method
+     */
+    string sprint() override;
 
 private:
     static HashNode<size_t, Item*>*
